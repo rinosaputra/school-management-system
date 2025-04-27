@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .env
+admin/_service_account.json
+admin/**/*.xlsx
 
 # Editor directories and files
 .vscode/*

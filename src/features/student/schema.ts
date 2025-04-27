@@ -1,19 +1,26 @@
 import { z } from "zod"
 import { StudentStatus } from "./const"
+import { PersonalDefault, PersonalSchema } from "../personal/schema"
 
-type StudentSchema = {
-  name: string
+export type StudentSchema = {
+  personal: PersonalSchema
   status: StudentStatus
+  master: number // NISN
+  index: number // NIS/NIPD
 }
 
 export const StudentSchema = z.object({
-  name: z.string(),
-  status: z.nativeEnum(StudentStatus)
+  personal: PersonalSchema,
+  status: z.nativeEnum(StudentStatus),
+  master: z.number({ coerce: true }),
+  index: z.number({ coerce: true }),
 })
 
 export const StudentDefault = (): StudentSchema => ({
-  name: "",
-  status: "active"
+  personal: PersonalDefault(),
+  status: "active",
+  master: 0,
+  index: 0,
 })
 
 type StudentOutputSchema = StudentSchema & {

@@ -1,3 +1,5 @@
+export const StudentPath = "students"
+
 export const StudentStatus = {
   active: "active",
   mutate: "mutate",

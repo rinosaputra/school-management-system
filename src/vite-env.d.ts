@@ -16,8 +16,10 @@ interface ImportMetaEnv {
   readonly VITE_FIREBASE_MEASUREMENT_ID: string;
 
   // # Features Configuration
+  readonly VITE_FEATURE_YEAR_ACTIVE: string;
   readonly VITE_FEATURE_GRADUATION: string;
   readonly VITE_FEATURE_GRADUATION_DATE: string;
+  readonly VITE_FEATURE_GRADUATION_DOC: string;
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;

@@ -47,6 +47,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.5.0",
     "embla-carousel-react": "^8.6.0",
     "firebase": "^11.6.1",
     "firebase-admin": "^13.3.0",
@@ -84,5 +85,13 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1"
+  },
+  "author": {
+    "name": "Rino Saputra",
+    "email": "rinosaputraas@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rinosaputra/school-management-system.git"
   }
 }

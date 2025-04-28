@@ -21,26 +21,17 @@ A modern, open-source school management system built with React, TypeScript, Fir
 ```
 src/
 ├── @types/               # Custom TypeScript types
-├── api/                  # Firebase API calls
 ├── assets/               # Static assets (images, fonts)
 ├── components/           # Reusable UI components
-│   ├── common/           # Common components (buttons, inputs)
 │   ├── layout/           # Layout components
 │   └── ui/               # UI-specific components
-├── config/               # App configuration
+├── features/             # App features
 ├── contexts/             # React contexts
 ├── hooks/                # Custom React hooks
-├── pages/                # Application pages
-│   ├── admin/            # Admin pages
-│   ├── auth/             # Authentication pages
-│   ├── dashboard/        # Dashboard pages
-│   └── ...               # Other pages
-├── routes/               # Application routing
-├── services/             # Business logic/services
-├── stores/               # State management (Zustand/Redux)
-├── styles/               # Global styles
-├── utils/                # Utility functions
+├── routers/              # Application routing schema
+├── lib/                  # Utility functions
 ├── App.tsx               # Main App component
+├── index.css             # Global styles
 └── main.tsx              # Application entry point
 ```
 
@@ -55,12 +46,14 @@ src/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/rinosaputra/school-management-system.git
    cd school-management-system
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    # or
@@ -68,6 +61,7 @@ src/
    ```
 
 3. Create a `.env` file in the root directory and add your Firebase config:
+
    ```env
    VITE_FIREBASE_API_KEY=your-api-key
    VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
@@ -90,7 +84,7 @@ src/
 - `build`: Builds the app for production
 - `preview`: Previews the production build locally
 - `lint`: Runs ESLint
-- `type-check`: Runs TypeScript type checking
+- `typecheck`: Runs TypeScript type checking
 - `test`: Runs tests
 
 ## Path Aliases
@@ -98,8 +92,8 @@ src/
 This project uses `@` as an alias for the `src` directory. Example:
 
 ```typescript
-import Button from '@/components/common/Button';
-import { useAuth } from '@/hooks/useAuth';
+import Button from "@/components/common/Button";
+import { useAuth } from "@/hooks/useAuth";
 ```
 
 Configured in `vite.config.ts` and `tsconfig.json`.
@@ -127,7 +121,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
+Ino - [@rinosaputra](https://x.com/RinoSaputraAS)
 
 Project Link: [https://github.com/rinosaputra/school-management-system](https://github.com/rinosaputra/school-management-system)
 

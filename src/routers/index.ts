@@ -8,11 +8,11 @@ export const routers = createBrowserRouter([
       {
         index: true,
         lazy: async () => ({
-          Component: (await import("@/features/home")).default
+          Component: (await import("@/features/_home")).default
         })
       },
       {
-        path: links.features.graduation.$path(),
+        path: links.app.graduation.$path(),
         lazy: async () => ({
           Component: (await import("@/features/graduation")).default
         }),

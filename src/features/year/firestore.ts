@@ -1,9 +1,9 @@
 import { collection, doc } from "firebase/firestore";
 import { YearDefault, YearSchema } from "./schema";
 import { createConverter, firebaseFirestore } from "@/lib/firebase/firestore";
-import { YearId, YearPath } from "./const";
+import { YearId, YearPathFirestore } from "./const";
 
-export const YearCollection = () => collection(firebaseFirestore, YearPath)
+export const YearCollection = () => collection(firebaseFirestore, ...YearPathFirestore({}))
   .withConverter(
     createConverter({
       schema: YearSchema,

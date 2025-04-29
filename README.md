@@ -42,6 +42,7 @@ src/
 - Node.js (v16 or higher)
 - npm or yarn
 - Firebase project setup
+  - Hosting `firebase experiments:enable webframeworks`
 
 ### Installation
 

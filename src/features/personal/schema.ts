@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { PersonalGender, PersonalReligion } from "./const";
+import { FirebaseDate } from "@/lib/zod";
 
 type AddressSchema = {
   street: string;
@@ -28,7 +29,7 @@ export type PersonalSchema = {
   name: string;
   gender: PersonalGender;
   birth: {
-    date: Date;
+    date: FirebaseDate;
     place: string;
   }
   religion: PersonalReligion;
@@ -44,7 +45,7 @@ export const PersonalSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   gender: z.nativeEnum(PersonalGender),
   birth: z.object({
-    date: z.date({ coerce: true }),
+    date: FirebaseDate,
     place: z.string({ coerce: true }),
   }),
   religion: z.nativeEnum(PersonalReligion),
@@ -58,13 +59,13 @@ export const PersonalSchema = z.object({
 export const PersonalDefault = (): PersonalSchema => ({
   master: 0,
   name: "",
-  address: {},
   birth: {
     date: new Date(),
     place: "",
   },
   gender: PersonalGender.male,
   religion: PersonalReligion.islam,
+  address: {},
   phone: {
     code: "62",
     number: 0,

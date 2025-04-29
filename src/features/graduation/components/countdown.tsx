@@ -9,9 +9,8 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { Bell } from "lucide-react";
 import GraduationForm from "./form";
+import GraduationNotif from "./notif";
 
 interface CountdownBoxProps {
   label: string;
@@ -46,8 +45,13 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
 
   React.useEffect(() => {
     let interval: NodeJS.Timeout;
-
     if (isRunning) {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+      if (difference <= 0) {
+        setIsRunning(false);
+        return;
+      }
       interval = setInterval(() => {
         const now = new Date();
         const difference = targetDate.getTime() - now.getTime();
@@ -75,7 +79,7 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-xl">Pengumuman Kelulusan</CardTitle>
-        <CardDescription className="text-4xl text-foreground font-medium">
+        <CardDescription className="text-4xl font-semibold">
           Dibuka Dalam
         </CardDescription>
       </CardHeader>
@@ -90,10 +94,7 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
       </CardContent>
       <Separator />
       <CardFooter className="space-y-4">
-        <Button size={"lg"} className="w-full">
-          <Bell className="mr-2" size={16} />
-          <span>Ingatkan Saya</span>
-        </Button>
+        <GraduationNotif />
       </CardFooter>
     </Card>
   );

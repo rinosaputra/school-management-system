@@ -8,9 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
-import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -29,27 +26,32 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
+import {
+  GraduationFormContext,
+  GraduationFormContextState,
+  GraduationFormSchema,
+} from "./hook";
+import GraduationFormSubmit from "./submit";
+import GraduationFormResult from "./result";
 
-const FormSchema = z.object({
-  nisn: z.string().min(10, {
-    message: "NISN harus terdiri dari 10 digit",
-  }),
-  birth: z.string().min(8, {
-    message: "Tanggal lahir tidak valid",
-  }),
-});
-
-type FormSchema = z.infer<typeof FormSchema>;
-
-const GraduationForm: React.FC = () => {
-  const form = useForm<FormSchema>({
-    resolver: zodResolver(FormSchema),
+const Before: React.FC<Record<"state", GraduationFormContextState | null>> = ({
+  state,
+}) => {
+  const form = useForm<GraduationFormSchema>({
+    resolver: zodResolver(GraduationFormSchema),
     defaultValues: {
-      nisn: "",
-      birth: "",
+      nisn: import.meta.env.PROD ? "" : "3060279309",
+      birth: import.meta.env.PROD ? "" : "2909200", // 7
     },
   });
 
+  if (state?.student)
+    return (
+      <GraduationFormResult
+        graduation={state.graduation}
+        student={state.student}
+      />
+    );
   return (
     <Card className="w-full md:max-w-md mx-auto">
       <CardHeader>
@@ -57,8 +59,8 @@ const GraduationForm: React.FC = () => {
         <CardDescription>Silahkan isi NISN dan Tanggal Lahir.</CardDescription>
       </CardHeader>
       <Separator />
-      <CardContent className="space-y-4">
-        <Form {...form}>
+      <Form {...form}>
+        <CardContent className="space-y-4">
           <FormField
             control={form.control}
             name="nisn"
@@ -104,7 +106,7 @@ const GraduationForm: React.FC = () => {
                 <FormControl>
                   <InputOTP
                     pattern={REGEXP_ONLY_DIGITS}
-                    maxLength={6}
+                    maxLength={8}
                     {...field}
                   >
                     <InputOTPGroup>
@@ -134,22 +136,25 @@ const GraduationForm: React.FC = () => {
               </FormItem>
             )}
           />
-        </Form>
-      </CardContent>
-      <Separator />
-      <CardFooter className="space-y-4">
-        <Button
-          size={"lg"}
-          className="w-full"
-          onClick={form.handleSubmit((data) => {
-            console.log(data);
-          })}
-        >
-          <Search className="mr-2" size={16} />
-          <span>Check Kelulusan</span>
-        </Button>
-      </CardFooter>
+        </CardContent>
+        <Separator />
+        <CardFooter className="space-y-4 flex-col items-start">
+          <GraduationFormSubmit />
+        </CardFooter>
+      </Form>
     </Card>
+  );
+};
+
+const GraduationForm: React.FC = () => {
+  const [state, setState] = React.useState<GraduationFormContextState | null>(
+    null
+  );
+
+  return (
+    <GraduationFormContext.Provider value={{ state, setState }}>
+      <Before state={state} />
+    </GraduationFormContext.Provider>
   );
 };
 

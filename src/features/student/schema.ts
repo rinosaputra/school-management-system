@@ -17,6 +17,7 @@ export type StudentSchema = {
   status: StudentStatus
   master: number // NISN
   index: number // NIS/NIPD
+  rombelId: string | null
   parents: Record<"father" | "mother" | "guardian", StudentParentSchema | null>
 }
 
@@ -25,6 +26,7 @@ export const StudentSchema = z.object({
   status: z.nativeEnum(StudentStatus),
   master: z.number({ coerce: true }),
   index: z.number({ coerce: true }),
+  rombelId: z.string().uuid().nullable(),
   parents: z.object({
     father: StudentParentSchema.nullable(),
     mother: StudentParentSchema.nullable(),
@@ -37,6 +39,7 @@ export const StudentDefault = (): StudentSchema => ({
   status: "active",
   master: 0,
   index: 0,
+  rombelId: null,
   parents: {
     father: null,
     mother: null,
@@ -44,11 +47,11 @@ export const StudentDefault = (): StudentSchema => ({
   }
 })
 
-type StudentOutputSchema = StudentSchema & {
+export type StudentOutputSchema = StudentSchema & {
   uid: string
 }
 
-const StudentOutputSchema = StudentSchema.extend({
+export const StudentOutputSchema = StudentSchema.extend({
   uid: z.string().uuid()
 })
 

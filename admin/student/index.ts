@@ -2,14 +2,17 @@ import { adminFirestore, findFile } from '..';
 import xlsx from 'xlsx';
 import { z } from 'zod';
 import { v4 } from 'uuid';
-import { StudentSchema } from '../../src/features/student/schema';
+import { format } from 'date-fns';
 import { PersonalReligion } from '../../src/features/personal/const';
-import { StudentPath } from '../../src/features/student/const';
+import { StudentPathFirestore } from '../../src/features/student/const';
 import { SchoolLevelRoman, SchoolLevelRomanToNumber } from '../../src/features/school/const';
-import { YearPath } from '../../src/features/year/const';
-import { RombelPath } from '../../src/features/rombel/const';
+import { RombelPathFirestore } from '../../src/features/rombel/const';
+import { GraduationPathFirestore } from '../../src/features/graduation/const';
+import { StudentSchema } from '../../src/features/student/schema';
 import { RombelSchema } from '../../src/features/rombel/schema';
+import { GraduationDefault, GraduationSchema } from '../../src/features/graduation/schema';
 
+const GraduationIsActive = process.env.VITE_FEATURE_GRADUATION === "true"
 type Result<T> = { id: string, result: T }
 const size = 426; // Update this to the number of rows in your Excel file
 // Execute this script with the command: `node --import=tsx admin/student/index.ts`
@@ -69,6 +72,7 @@ const students = json
         },
       },
       rombel: data[42],
+      rombelId: null,
     }
   }))
 
@@ -91,8 +95,9 @@ const { error: StudentErrs } = z.array(StudentSchema).safeParse(students.map((e)
 const { error: RombelErrs } = z.array(RombelSchema).safeParse(rombels.map((e) => e.result));
 
 
-const StudentCollection = adminFirestore.collection(StudentPath)
-const RombelCollection = adminFirestore.collection([YearPath, process.env.VITE_FEATURE_YEAR_ACTIVE!, RombelPath].join("/"))
+const StudentCollection = adminFirestore.collection(StudentPathFirestore({}).join("/"))
+const RombelCollection = adminFirestore.collection(RombelPathFirestore({ yearId: process.env.VITE_FEATURE_YEAR_ACTIVE! }).join("/"))
+const GraduationCollection = adminFirestore.collection(GraduationPathFirestore({ yearId: process.env.VITE_FEATURE_YEAR_ACTIVE! }).join("/"))
 adminFirestore
   .runTransaction(async (transaction) => {
     if (StudentErrs || RombelErrs) return console.error("Validation Error", {
@@ -106,23 +111,46 @@ adminFirestore
       }
     })
     await Promise.all([
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      ...students.map(({ id, result: { rombel, ...result } }) => transaction.set(
-        StudentCollection.doc(id),
-        result,
-        {}
-      )),
+      ...students
+        .map(({ id, result: { rombel, ...result } }) => transaction.set(
+          StudentCollection.doc(id),
+          {
+            ...result,
+            rombelId: rombels.find((e) => e.result.name === rombel)?.id ?? null,
+          }
+        )),
       ...rombels.map(({ id, result }) => transaction.set(
         RombelCollection.doc(id),
-        result,
-        {}
-      ))
+        result
+      )),
+      ...(process.env.VITE_FEATURE_GRADUATION !== "true" ? [] : rombels
+        .filter(e => e.result.level === 12).map((e) => e.result.students.map((id) => {
+          const find = students.find(e => e.id === id)
+          return {
+            studentId: id,
+            master: find?.result.master ?? 0,
+            birth: find?.result.personal.birth.date ?? new Date("2000-01-01"),
+          }
+        }))
+        .flat()
+        .map(({ studentId, master, birth }) => {
+          const value: GraduationSchema = {
+            ...GraduationDefault(),
+            studentId,
+          }
+          return transaction.set(
+            GraduationCollection.doc([master, format(birth, "yyyy-MM-dd")].join('-')),
+            value
+          )
+        })
+      )
     ])
   })
   .then(() => {
     console.log("Transaction successfully committed!", {
       students: students.length,
       rombels: rombels.length,
+      graduaction: GraduationIsActive
     });
   })
   .catch((error) => {

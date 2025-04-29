@@ -6,7 +6,7 @@ import { DeepPartial } from 'react-hook-form'
 import { z } from 'zod'
 
 const firebaseFirestore = getFirestore(firebaseApp)
-if (!import.meta.env.PROD) connectFirestoreEmulator(firebaseFirestore, '127.0.0.1', 8080);
+if (import.meta.env.VITE_FIREBASE_EMULATOR === 'true') connectFirestoreEmulator(firebaseFirestore, '127.0.0.1', 8080);
 
 type CreateConverterResult<T> = T & {
   invalid_data?: {
@@ -31,6 +31,7 @@ function createConverter<
     toFirestore: (data: Infer): DocumentData => data,
     fromFirestore: (snapshot: QueryDocumentSnapshot): Infer => {
       const raw = snapshot.data()
+      if (import.meta.env.DEV) console.log(snapshot.ref.path, raw)
       const { data, error } = schema.safeParse(raw)
       return !error
         ? data

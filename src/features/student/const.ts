@@ -1,4 +1,10 @@
-export const StudentPath = "students"
+import { VersionPathFirestore } from "@/lib/version"
+
+const StudentPath = "students" as const
+
+export type StudentId = Record<"studentId", string>
+
+export const StudentPathFirestore = ({ studentId }: Partial<StudentId>) => VersionPathFirestore(StudentPath, studentId)
 
 export const StudentStatus = {
   active: "active",

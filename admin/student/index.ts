@@ -1,13 +1,10 @@
-import { adminFirestore, findFile } from '..';
+import { adminFirestore, findFile, GraduationCollection, RombelCollection, StudentCollection } from '..';
 import xlsx from 'xlsx';
 import { z } from 'zod';
 import { v4 } from 'uuid';
 import { format } from 'date-fns';
 import { PersonalReligion } from '../../src/features/personal/const';
-import { StudentPathFirestore } from '../../src/features/student/const';
 import { SchoolLevelRoman, SchoolLevelRomanToNumber } from '../../src/features/school/const';
-import { RombelPathFirestore } from '../../src/features/rombel/const';
-import { GraduationPathFirestore } from '../../src/features/graduation/const';
 import { StudentSchema } from '../../src/features/student/schema';
 import { RombelSchema } from '../../src/features/rombel/schema';
 import { GraduationDefault, GraduationSchema } from '../../src/features/graduation/schema';
@@ -94,10 +91,6 @@ const rombels = json
 const { error: StudentErrs } = z.array(StudentSchema).safeParse(students.map((e) => e.result));
 const { error: RombelErrs } = z.array(RombelSchema).safeParse(rombels.map((e) => e.result));
 
-
-const StudentCollection = adminFirestore.collection(StudentPathFirestore({}).join("/"))
-const RombelCollection = adminFirestore.collection(RombelPathFirestore({ yearId: process.env.VITE_FEATURE_YEAR_ACTIVE! }).join("/"))
-const GraduationCollection = adminFirestore.collection(GraduationPathFirestore({ yearId: process.env.VITE_FEATURE_YEAR_ACTIVE! }).join("/"))
 adminFirestore
   .runTransaction(async (transaction) => {
     if (StudentErrs || RombelErrs) return console.error("Validation Error", {

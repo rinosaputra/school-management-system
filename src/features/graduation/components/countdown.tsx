@@ -3,14 +3,12 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import GraduationForm from "./form";
-import GraduationNotif from "./notif";
 
 interface CountdownBoxProps {
   label: string;
@@ -92,10 +90,6 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
           <CountdownBox label="Detik" value={timeLeft.seconds} />
         </div>
       </CardContent>
-      <Separator />
-      <CardFooter className="space-y-4">
-        <GraduationNotif />
-      </CardFooter>
     </Card>
   );
 };

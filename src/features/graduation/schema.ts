@@ -3,7 +3,9 @@ import { parse } from "date-fns"
 import { z } from "zod"
 
 export type GraduationSchema = {
+  code: string
   studentId: string
+  notPassed?: boolean
   values: Record<string, number>
   dates: {
     print: FirebaseDate | null
@@ -12,7 +14,9 @@ export type GraduationSchema = {
 }
 
 export const GraduationSchema = z.object({
+  code: z.string(),
   studentId: z.string().uuid(),
+  notPassed: z.boolean().optional(),
   values: z.record(z.number()),
   dates: z.object({
     print: FirebaseDate.nullable(),
@@ -21,6 +25,7 @@ export const GraduationSchema = z.object({
 })
 
 export const GraduationDefault = (): GraduationSchema => ({
+  code: "",
   studentId: "",
   values: {},
   dates: {

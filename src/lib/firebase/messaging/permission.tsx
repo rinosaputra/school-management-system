@@ -1,4 +1,3 @@
-/// <reference lib="dom" />
 import React from "react";
 import { getToken } from "firebase/messaging";
 import { firebaseMessaging } from ".";

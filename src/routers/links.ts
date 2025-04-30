@@ -19,5 +19,20 @@ export const links = route({
         }),
       }
     }),
+    admin: route({
+      path: "admin",
+      children: {
+        graduation: route({
+          path: "graduation"
+        })
+      }
+    }),
+    sign: route({
+      path: "sign",
+      children: {
+        in: route({ path: "in" }),
+        up: route({ path: "up" }),
+      }
+    })
   }
 })

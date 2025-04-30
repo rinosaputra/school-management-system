@@ -12,10 +12,49 @@ export const routers = createBrowserRouter([
         })
       },
       {
-        path: links.app.graduation.$path(),
+        path: links.app.$path(),
+        children: [
+          {
+            path: links.app.graduation.$path(),
+            lazy: async () => ({
+              Component: (await import("@/features/graduation")).default
+            }),
+          },
+        ]
+      },
+      {
+        path: links.sign.$path(),
         lazy: async () => ({
-          Component: (await import("@/features/graduation")).default
+          Component: (await import("@/features/_sign/layout")).default
         }),
+        children: [
+          {
+            path: links.sign.in.$path(),
+            lazy: async () => ({
+              Component: (await import("@/features/_sign/in")).default
+            })
+          }
+        ]
+      },
+      {
+        path: links.admin.$path(),
+        lazy: async () => ({
+          Component: (await import("@/features/_admin/layout")).default
+        }),
+        children: [
+          {
+            index: true,
+            lazy: async () => ({
+              Component: (await import("@/features/_admin")).default
+            }),
+          },
+          {
+            path: links.admin.graduation.$path(),
+            lazy: async () => ({
+              Component: (await import("@/features/graduation/_admin")).default
+            }),
+          },
+        ]
       },
       // {
       //   path: links.sign.$path(),

@@ -14,8 +14,8 @@ dist-ssr
 .env
 admin/_service_account.json
 admin/**/*.xlsx
-.firebase
 public/firebase-messaging-sw.js
+.firebase/**/*
 
 # Editor directories and files
 .vscode/*

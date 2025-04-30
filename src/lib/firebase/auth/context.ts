@@ -9,6 +9,7 @@ type FirebaseAuthContextRequired = {
 export type FirebaseAuthContextState = {
   user: User | null
   year: number | null
+  ready: boolean
 }
 
 export type FirebaseAuthContextDispatchProps<T extends FirebaseAuthContextState = FirebaseAuthContextState, K extends keyof T = keyof T> = {

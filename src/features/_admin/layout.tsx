@@ -21,6 +21,7 @@ import { links } from "@/routers/links";
 const AdminLayout: React.FC = () => {
   const { state } = useFirebaseAuth();
 
+  if (!state.ready) return null;
   if (!state.user) return <Navigate to={links.sign.in.$path()} />;
   return (
     <SidebarProvider>

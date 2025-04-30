@@ -14,6 +14,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useMutation } from "@tanstack/react-query";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { firebaseAuth } from "@/lib/firebase/auth";
+import { toast } from "sonner";
 
 type SignInSchema = {
   email: string;
@@ -33,6 +37,10 @@ const SignIn: React.FC = () => {
       password: "",
     },
   });
+  const { isPending, mutateAsync } = useMutation({
+    mutationKey: ["sign-in"],
+    mutationFn: ({ email, password }: SignInSchema) => signInWithEmailAndPassword(firebaseAuth, email, password),
+  })
 
   return (
     <SignProvider>
@@ -72,10 +80,27 @@ const SignIn: React.FC = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full">
-            Login
-          </Button>
         </Form>
+        <Button
+          className="w-full"
+          disabled={isPending || !form.formState.isDirty}
+          onClick={form.handleSubmit(data => {
+            toast.promise(mutateAsync(data), {
+              loading: "Signing in...",
+              success: () => {
+                form.reset();
+                return "Signed in successfully!";
+              },
+              error: (error) => {
+                if (error instanceof Error) {
+                  return error.message;
+                }
+                return "Failed to sign in";
+              }
+            });
+          })}>
+          Sign In
+        </Button>
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}

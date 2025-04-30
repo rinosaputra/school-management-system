@@ -18,6 +18,7 @@ const action = (
 ) => ({
   ...state,
   [type]: payload,
+  ready: true,
 });
 
 function App() {
@@ -27,12 +28,17 @@ function App() {
     year: !isNaN(Number(import.meta.env.VITE_FEATURE_YEAR_ACTIVE))
       ? Number(import.meta.env.VITE_FEATURE_YEAR_ACTIVE)
       : new Date().getFullYear(),
+    ready: false,
   });
 
   React.useEffect(() => {
-    onAuthStateChanged(firebaseAuth, (user) => {
+    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
+      if (import.meta.env.DEV) console.log("Auth state changed", user);
       dispatch({ type: "user", payload: user });
     });
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (

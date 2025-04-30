@@ -1,8 +1,14 @@
+import { useFirebaseAuth } from "@/lib/firebase/auth/context";
+import { links } from "@/routers/links";
 import { School } from "lucide-react";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 const SignLayout: React.FC = () => {
+  const { state } = useFirebaseAuth();
+
+  if (!state.ready) return null;
+  if (state.user) return <Navigate to={links.admin.$path()} />;
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">

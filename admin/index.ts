@@ -13,7 +13,8 @@ const __dirname = dirname(__filename);
 export const findFile = (...paths: string[]) => join(__dirname, ...paths)
 
 if (process.env.VITE_FIREBASE_EMULATOR === 'true') {
-  process.env['FIRESTORE_EMULATOR_HOST'] = 'localhost:8080';
+  process.env['FIRESTORE_EMULATOR_HOST'] = '127.0.0.1:8080';
+  process.env['FIREBASE_AUTH_EMULATOR_HOST'] = '127.0.0.1:9099';
 }
 
 admin.initializeApp({

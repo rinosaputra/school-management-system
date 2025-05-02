@@ -1,6 +1,7 @@
 import { FirebaseDate } from "@/lib/zod"
 import { parse } from "date-fns"
 import { z } from "zod"
+import { StudentOutputSchema } from "../student/schema"
 
 export type GraduationSchema = {
   code: string
@@ -39,7 +40,7 @@ export type GraduationOutputSchema = GraduationSchema & {
   date: Date
 }
 
-export const GraduationOutputSchema = GraduationSchema.extend({
+export const GraduationOutputSchema: z.ZodType<GraduationOutputSchema> = GraduationSchema.extend({
   master: z.number({ coerce: true }),
   date: z.date({ coerce: true })
 })
@@ -60,3 +61,18 @@ export const GraduationOutputParse = (row: GraduationSchema, ids: string): Gradu
     date: new Date("2000-01-01"),
   };
 };
+
+export type GraduationWithStudentOutputSchema = GraduationOutputSchema & {
+  student: StudentOutputSchema | null
+}
+
+export const GraduationWithStudentOutputSchema: z.ZodType<GraduationWithStudentOutputSchema> = GraduationSchema.extend({
+  master: z.number({ coerce: true }),
+  date: z.date({ coerce: true }),
+  student: z.nullable(StudentOutputSchema)
+})
+
+export const GraduationWithStudentOutputParse = (graduation: GraduationOutputSchema, student: StudentOutputSchema | null): GraduationWithStudentOutputSchema => ({
+  ...graduation,
+  student
+})

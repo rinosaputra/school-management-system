@@ -1,5 +1,5 @@
 import React from "react";
-import Countdown from "./components/countdown";
+import GraduationCountdown from "./components/countdown";
 import { isValid } from "date-fns";
 import GraduationForm from "./components/form";
 import ThemeButton from "../_theme/components/button";
@@ -10,7 +10,7 @@ const active =
 
 const Content = () => {
   if (!active) return <GraduationForm />; // DISABLED
-  return <Countdown date={date} />;
+  return <GraduationCountdown date={date} />;
 };
 
 const Graduation: React.FC = () => (

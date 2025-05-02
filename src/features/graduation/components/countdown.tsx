@@ -9,6 +9,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import GraduationForm from "./form";
+import { Loader } from "lucide-react";
 
 interface CountdownBoxProps {
   label: string;
@@ -40,19 +41,26 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
     seconds: 0,
   });
   const [isRunning, setIsRunning] = React.useState(true);
+  const [ready, setReady] = React.useState(false);
+
+  const checkDate = React.useCallback(() => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+    return difference;
+  }, [targetDate]);
+
+  const disabled = React.useMemo(() => checkDate() <= 0, [checkDate]);
 
   React.useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isRunning) {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
-      if (difference <= 0) {
+      if (checkDate() <= 0) {
         setIsRunning(false);
+        setReady(true);
         return;
       }
       interval = setInterval(() => {
-        const now = new Date();
-        const difference = targetDate.getTime() - now.getTime();
+        const difference = checkDate();
 
         if (difference <= 0) {
           clearInterval(interval);
@@ -67,12 +75,20 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
           seconds: Math.floor((difference / 1000) % 60),
         });
       }, 1000);
+      setReady(true);
+    } else {
+      setReady(true);
+
     }
 
     return () => clearInterval(interval);
   }, [targetDate, isRunning]);
 
-  if (!isRunning) return <GraduationForm />;
+  if (!ready) return <div className="m-auto flex items-center justify-center">
+    <Loader className="animate-spin" />
+    <p className="ml-2 text-sm text-center">Loading...</p>
+  </div>
+  if (disabled || !isRunning) return <GraduationForm />;
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>

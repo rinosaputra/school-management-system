@@ -9,10 +9,10 @@ const Timestamp = z.custom<Timestamp>((val) => {
 });
 
 export const FirebaseDate = Timestamp.or(z.date({ coerce: true })).transform((val) => {
-  if (typeof (val as Timestamp)?.toDate === "function"){
+  if (typeof (val as Timestamp)?.toDate === "function") {
     return (val as Timestamp).toDate()
   };
   return val as Date;
-})
+}) as unknown as z.ZodDate;
 
 export type FirebaseDate = z.infer<typeof FirebaseDate>;

@@ -31,7 +31,7 @@ function createConverter<
     toFirestore: (data: Infer): DocumentData => data,
     fromFirestore: (snapshot: QueryDocumentSnapshot): Infer => {
       const raw = snapshot.data()
-      if (import.meta.env.DEV) console.log(snapshot.ref.path, raw)
+      // if (import.meta.env.DEV) console.log(snapshot.ref.path, raw)
       const { data, error } = schema.safeParse(raw)
       return !error
         ? data

@@ -51,7 +51,7 @@ export type StudentOutputSchema = StudentSchema & {
   uid: string
 }
 
-export const StudentOutputSchema = StudentSchema.extend({
+export const StudentOutputSchema: z.ZodType<StudentOutputSchema> = StudentSchema.extend({
   uid: z.string().uuid()
 })
 

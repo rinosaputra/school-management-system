@@ -1,7 +1,6 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { routers } from "./routers";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import MessagingForeground from "./lib/firebase/messaging/foreground";
 import { onAuthStateChanged } from "firebase/auth";
@@ -11,6 +10,7 @@ import {
   FirebaseAuthContextDispatchProps,
   FirebaseAuthContextState,
 } from "./lib/firebase/auth/context";
+import QueryProvider from "./lib/tanstack-query/provider";
 
 const action = (
   state: FirebaseAuthContextState,
@@ -22,7 +22,6 @@ const action = (
 });
 
 function App() {
-  const [client] = React.useState(() => new QueryClient());
   const [state, dispatch] = React.useReducer(action, {
     user: null,
     year: !isNaN(Number(import.meta.env.VITE_FEATURE_YEAR_ACTIVE))
@@ -42,13 +41,13 @@ function App() {
   }, []);
 
   return (
-    <QueryClientProvider client={client}>
+    <QueryProvider untest>
       <FirebaseAuthContext.Provider value={{ state, dispatch }}>
         <RouterProvider router={routers} />
       </FirebaseAuthContext.Provider>
       <ReactQueryDevtools initialIsOpen={false} />
       <MessagingForeground />
-    </QueryClientProvider>
+    </QueryProvider>
   );
 }
 

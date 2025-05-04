@@ -51,8 +51,16 @@ export const routers = createBrowserRouter([
           {
             path: links.admin.graduation.$path(),
             lazy: async () => ({
-              Component: (await import("@/features/graduation/_admin")).default
+              Component: (await import("@/features/graduation/_admin/layout")).default
             }),
+            children: [
+              {
+                index: true,
+                lazy: async () => ({
+                  Component: (await import("@/features/graduation/_admin")).default
+                })
+              },
+            ]
           },
         ]
       },

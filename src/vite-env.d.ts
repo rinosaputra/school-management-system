@@ -5,6 +5,7 @@ interface ImportMetaEnv {
   readonly VITE_APP_NAME_SHORT: string;
   readonly VITE_APP_NAME: string;
   readonly VITE_APP_VERSION: string;
+  readonly VITE_APP_FORCE_ONLINE: string;
 
   // Recaptha configuration
   readonly VITE_RECAPTCHA_SITE_KEY: string;

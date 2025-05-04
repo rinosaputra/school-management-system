@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  Book,
+  Building,
   ChartSpline,
   Megaphone,
   Users,
@@ -13,11 +15,13 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
+import { links } from "@/routers/links";
 
 type Item = {
   name: string;
   url: string;
   icon: LucideIcon;
+  disabled?: boolean;
 };
 
 type Row = {
@@ -27,27 +31,36 @@ type Row = {
 
 const rows: Row[] = [
   {
+    label: "Dashboard",
+    items: [
+      {
+        name: "Ringkasan",
+        url: '#',
+        icon: ChartSpline,
+        disabled: true,
+      },
+    ],
+  },
+  {
     label: "Master",
     items: [
       {
         name: "Peserta Didik",
         url: "#", //"/admin/student",
         icon: Users,
+        disabled: true,
       },
       {
         name: "Kelas",
         url: "#", //"/admin/class",
-        icon: ChartSpline,
+        icon: Building,
+        disabled: true,
       },
       {
         name: "Mata Pelajaran",
         url: "#", //"/admin/subject",
-        icon: ChartSpline,
-      },
-      {
-        name: "Jadwal",
-        url: "#", //"/admin/schedule",
-        icon: ChartSpline,
+        icon: Book,
+        disabled: true,
       },
     ],
   },
@@ -56,7 +69,7 @@ const rows: Row[] = [
     items: [
       {
         name: "Kelulusan",
-        url: "admin/graduation",
+        url: links.admin.graduation.$path(),
         icon: Megaphone,
       },
     ],
@@ -66,16 +79,19 @@ const rows: Row[] = [
 const AdminSidebarContent: React.FC = () => {
   return rows.map((row, i) => (
     <SidebarGroup key={i}>
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <SidebarGroupLabel>{row.label}</SidebarGroupLabel>
       <SidebarMenu>
         {row.items.map((item, i) => (
           <SidebarMenuItem key={i}>
-            <SidebarMenuButton asChild tooltip={item.name}>
+            {item.disabled ? (<SidebarMenuButton tooltip={item.name} disabled>
+              <item.icon />
+              <span>{item.name}</span>
+            </SidebarMenuButton>) : (<SidebarMenuButton tooltip={item.name} asChild>
               <Link to={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
               </Link>
-            </SidebarMenuButton>
+            </SidebarMenuButton>)}
           </SidebarMenuItem>
         ))}
       </SidebarMenu>

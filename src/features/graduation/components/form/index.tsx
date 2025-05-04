@@ -33,6 +33,7 @@ import {
 } from "./hook";
 import GraduationFormSubmit from "./submit";
 import GraduationFormResult from "./result";
+import GraduationLogo from "../logo";
 
 const Before: React.FC<Record<"state", GraduationFormContextState | null>> = ({
   state,
@@ -55,8 +56,10 @@ const Before: React.FC<Record<"state", GraduationFormContextState | null>> = ({
   return (
     <Card className="w-full md:max-w-md mx-auto">
       <CardHeader>
-        <CardTitle className="text-xl">Pengumuman Kelulusan</CardTitle>
-        <CardDescription>Silahkan isi NISN dan Tanggal Lahir.</CardDescription>
+        <GraduationLogo>
+          <CardTitle className="text-xl">Pengumuman Kelulusan</CardTitle>
+          <CardDescription>Silahkan isi NISN dan Tanggal Lahir.</CardDescription>
+        </GraduationLogo>
       </CardHeader>
       <Separator />
       <Form {...form}>

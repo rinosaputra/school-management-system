@@ -18,7 +18,7 @@ describe('useRombelData', () => {
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false)
       expect(result.current.data).toBeDefined()
-      expect(result.current.data?.results).toBeInstanceOf(Array)
+      expect(result.current.data).toBeInstanceOf(Array)
     })
   })
 })
@@ -29,7 +29,7 @@ describe('useRombelWithStudentsData', () => {
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false)
       expect(result.current.data).toBeDefined()
-      expect(result.current.data?.results).toBeInstanceOf(Array)
+      expect(result.current.data).toBeInstanceOf(Array)
     })
   })
 })

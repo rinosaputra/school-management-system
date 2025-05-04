@@ -16,6 +16,7 @@ admin/_service_account.json
 admin/**/*.xlsx
 public/firebase-messaging-sw.js
 .firebase/**/*
+public/images/**/*
 
 # Editor directories and files
 .vscode/*

@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import GraduationForm from "./form";
 import { Loader } from "lucide-react";
+import GraduationLogo from "./logo";
 
 interface CountdownBoxProps {
   label: string;
@@ -92,10 +93,12 @@ const GraduationCountdown: React.FC<CountdownProps> = ({
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle className="text-xl">Pengumuman Kelulusan</CardTitle>
-        <CardDescription className="text-4xl font-semibold">
-          Dibuka Dalam
-        </CardDescription>
+        <GraduationLogo>
+          <CardTitle className="text-xl">Pengumuman Kelulusan</CardTitle>
+          <CardDescription className="text-4xl font-semibold">
+            Dibuka Dalam
+          </CardDescription>
+        </GraduationLogo>
       </CardHeader>
       <Separator />
       <CardContent className="space-y-4">

@@ -63,16 +63,16 @@ export const GraduationOutputParse = (row: GraduationSchema, ids: string): Gradu
 };
 
 export type GraduationWithStudentOutputSchema = GraduationOutputSchema & {
-  student: StudentOutputSchema | null
+  student: StudentOutputSchema
 }
 
 export const GraduationWithStudentOutputSchema: z.ZodType<GraduationWithStudentOutputSchema> = GraduationSchema.extend({
   master: z.number({ coerce: true }),
   date: z.date({ coerce: true }),
-  student: z.nullable(StudentOutputSchema)
+  student: StudentOutputSchema
 })
 
-export const GraduationWithStudentOutputParse = (graduation: GraduationOutputSchema, student: StudentOutputSchema | null): GraduationWithStudentOutputSchema => ({
+export const GraduationWithStudentOutputParse = (graduation: GraduationOutputSchema, student: StudentOutputSchema): GraduationWithStudentOutputSchema => ({
   ...graduation,
   student
 })

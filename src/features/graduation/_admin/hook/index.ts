@@ -1,10 +1,11 @@
 import { getDocs } from "firebase/firestore"
 import { v4 } from "uuid"
 import { GraduationCollection } from "../../firestore"
-import { GraduationOutputParse, GraduationOutputSchema } from "../../schema"
+import { GraduationOutputParse, GraduationOutputSchema, GraduationWithStudentOutputSchema } from "../../schema"
 import { useQuery } from "@tanstack/react-query"
 import { useStudentData } from "@/features/student/hook"
-import { z } from "zod"
+import { StudentDefault, StudentOutputParse } from "@/features/student/schema"
+import { useLocal } from "@/lib/local/hook"
 
 export const getGraduationData = async () => {
   const snapshot = await getDocs(GraduationCollection({
@@ -16,31 +17,43 @@ export const getGraduationData = async () => {
   }
 }
 
-export const useGraduationData = () => {
+export const useGraduationData = ({ disabled, online }: UseQueryHookProps<{}>): UseQueryHookResults<GraduationOutputSchema> => {
+  const local = useLocal()
+  const isOffline = !online && import.meta.env.VITE_APP_FORCE_ONLINE === "false"
   const { data, isLoading } = useQuery({
     queryKey: ["graduation"],
-    queryFn: () => getGraduationData()
+    queryFn: () => getGraduationData(),
+    enabled: !disabled && !isOffline,
   })
 
-  return { data, isLoading }
+  if (isOffline) {
+    return {
+      data: local.data.get(['results', 'graduation']).map(GraduationOutputParse).value(),
+      token: local.token,
+      isLoading: local.isLoading,
+    }
+  }
+
+  return {
+    data: data?.results,
+    token: data?.token ?? "",
+    isLoading: isLoading
+  }
 }
 
-export const useGraduationWithRombelData = () => {
-  const graduations = useGraduationData()
-  const students = useStudentData()
-  const uid = graduations.data?.token ?? "" + students.data?.token ?? ""
-  if (graduations.isLoading || students.isLoading) return { isLoading: true }
+export const useGraduationWithStudentData = (props: UseQueryHookProps<{}>): UseQueryHookResults<GraduationWithStudentOutputSchema> => {
+  const graduations = useGraduationData(props)
+  const students = useStudentData(props)
+  const uid = graduations.token + students.token
+  if (graduations.isLoading || students.isLoading) return { isLoading: true, data: [], token: uid }
   return {
     isLoading: false,
-    data: {
-      results: z.array(GraduationOutputSchema)
-        .parse(graduations.data?.results.map(graduation => {
-          return {
-            ...graduation,
-            students: students.data?.results.filter(student => student.uid === graduation.studentId) ?? []
-          }
-        }) ?? []) ?? [],
-      token: uid,
-    }
+    data: graduations.data?.map<GraduationWithStudentOutputSchema>(graduation => {
+      return {
+        ...graduation,
+        student: students.data?.find(student => student.uid === graduation.studentId) ?? StudentOutputParse(StudentDefault(), v4()),
+      }
+    }) ?? [],
+    token: uid,
   }
 }

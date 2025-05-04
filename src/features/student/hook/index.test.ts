@@ -5,11 +5,10 @@ import QueryProvider from '@/lib/tanstack-query/provider'
 
 describe('useStudentData', async () => {
   it('should return data and loading state', async () => {
-    const { result } = renderHook(() => useStudentData(), { wrapper: QueryProvider })
+    const { result } = renderHook(() => useStudentData({}), { wrapper: QueryProvider })
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false)
-      expect(result.current.data).toBeDefined()
-      expect(result.current.data?.results).toBeInstanceOf(Array)
+      expect(result.current.data).toBeInstanceOf(Array)
     })
   })
 })

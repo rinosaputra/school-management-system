@@ -13,7 +13,8 @@
     "deploy": "firebase deploy --only hosting",
     "test:unit": "vitest --root src/",
     "seed:auth": "node --import=tsx admin/auth/index.ts",
-    "seed:student": "node --import=tsx admin/student/index.ts"
+    "seed:student": "node --import=tsx admin/student/index.ts",
+    "seed:saved": "node --import=tsx admin/saved/index.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -46,6 +47,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "@tanstack/react-query": "^5.74.4",
     "@tanstack/react-query-devtools": "^5.74.6",
+    "@tanstack/react-table": "^8.21.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -55,6 +57,8 @@
     "firebase": "^11.6.1",
     "firebase-admin": "^13.3.0",
     "input-otp": "^1.4.2",
+    "lodash": "^4.17.21",
+    "lowdb": "^7.0.1",
     "lucide-react": "^0.503.0",
     "next-themes": "^0.4.6",
     "react": "^18.3.1",
@@ -79,6 +83,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.2",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { getGraduationData, useGraduationData, useGraduationWithRombelData } from ".";
+import { getGraduationData, useGraduationData, useGraduationWithStudentData } from ".";
 import QueryProvider from "@/lib/tanstack-query/provider";
 
 describe('getGraduationData', () => {
@@ -13,22 +13,22 @@ describe('getGraduationData', () => {
 
 describe('useRombelData', () => {
   it('should return data and loading state', async () => {
-    const { result } = renderHook(() => useGraduationData(), { wrapper: QueryProvider })
+    const { result } = renderHook(() => useGraduationData({}), { wrapper: QueryProvider })
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false)
       expect(result.current.data).toBeDefined()
-      expect(result.current.data?.results).toBeInstanceOf(Array)
+      expect(result.current.data).toBeInstanceOf(Array)
     })
   });
 });
 
-describe('useGraduationWithRombelData', () => {
+describe('useGraduationWithStudentData', () => {
   it('should return data and loading state', async () => {
-    const { result } = renderHook(() => useGraduationWithRombelData(), { wrapper: QueryProvider })
+    const { result } = renderHook(() => useGraduationWithStudentData({}), { wrapper: QueryProvider })
     await waitFor(() => {
       expect(result.current.isLoading).toBe(false)
       expect(result.current.data).toBeDefined()
-      expect(result.current.data?.results).toBeInstanceOf(Array)
+      expect(result.current.data).toBeInstanceOf(Array)
     })
   });
 })

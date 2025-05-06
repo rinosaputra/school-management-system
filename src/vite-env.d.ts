@@ -5,6 +5,7 @@ interface ImportMetaEnv {
   readonly VITE_APP_NAME_SHORT: string;
   readonly VITE_APP_NAME: string;
   readonly VITE_APP_VERSION: string;
+  readonly VITE_APP_LEVEL: string;
   readonly VITE_APP_FORCE_ONLINE: string;
 
   // Recaptha configuration
@@ -21,10 +22,14 @@ interface ImportMetaEnv {
   readonly VITE_FIREBASE_EMULATOR: string;
 
   // # Features Configuration
+  readonly VITE_FEATURE_DOC_ADDRESS: string;
+  readonly VITE_FEATURE_HEAD_NAME: string;
+  readonly VITE_FEATURE_HEAD_CODE: string;
   readonly VITE_FEATURE_YEAR_ACTIVE: string;
   readonly VITE_FEATURE_GRADUATION: string;
   readonly VITE_FEATURE_GRADUATION_DATE: string;
   readonly VITE_FEATURE_GRADUATION_DOC: string;
+  readonly VITE_FEATURE_GRADUATION_DOC_DESCRIPTION: string;
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;

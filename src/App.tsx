@@ -11,6 +11,7 @@ import {
   FirebaseAuthContextState,
 } from "./lib/firebase/auth/context";
 import QueryProvider from "./lib/tanstack-query/provider";
+import { Environment } from "./lib/environment";
 
 const action = (
   state: FirebaseAuthContextState,
@@ -24,9 +25,7 @@ const action = (
 function App() {
   const [state, dispatch] = React.useReducer(action, {
     user: null,
-    year: !isNaN(Number(import.meta.env.VITE_FEATURE_YEAR_ACTIVE))
-      ? Number(import.meta.env.VITE_FEATURE_YEAR_ACTIVE)
-      : new Date().getFullYear(),
+    year: Environment.yearActive,
     ready: false,
   });
 

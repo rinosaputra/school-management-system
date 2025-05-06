@@ -2,7 +2,9 @@ import React from 'react'
 
 const Admin: React.FC = () => {
   return (
-    <div>Admin</div>
+    <div>
+      {/* Admin content goes here */}
+    </div>
   )
 }
 

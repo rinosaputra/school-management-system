@@ -51,7 +51,6 @@ const Item: React.FC<Item> = ({ label, type, payload, disabled, icon: Icon }) =>
       {label}
     </DropdownMenuItem>
   }
-
   if (type === "link") {
     if (disabled) return <DropdownMenuItem disabled>
       {Icon && <Icon />}
@@ -80,7 +79,6 @@ const Item: React.FC<Item> = ({ label, type, payload, disabled, icon: Icon }) =>
       </DropdownMenuSubContent>
     </DropdownMenuSub>
   }
-
   return null
 }
 

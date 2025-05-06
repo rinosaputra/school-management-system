@@ -35,9 +35,8 @@ const rows: Row[] = [
     items: [
       {
         name: "Ringkasan",
-        url: '#',
+        url: links.admin.$path(),
         icon: ChartSpline,
-        disabled: true,
       },
     ],
   },
@@ -69,7 +68,7 @@ const rows: Row[] = [
     items: [
       {
         name: "Kelulusan",
-        url: links.admin.graduation.$path(),
+        url: links.admin.graduation.list.$path(),
         icon: Megaphone,
       },
     ],

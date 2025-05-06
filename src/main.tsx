@@ -4,6 +4,13 @@ import "./index.css";
 import { ThemeProvider } from "./features/_theme/provider.tsx";
 import App from "./App.tsx";
 import { Toaster } from "./components/ui/sonner.tsx";
+import { Buffer } from "buffer/"; 
+import process from "process";
+
+if (window) {
+  window.Buffer = window.Buffer || Buffer;
+  window.process = window.process || process;
+}
 
 
 if ("serviceWorker" in navigator) {

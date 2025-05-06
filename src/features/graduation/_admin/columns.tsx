@@ -24,4 +24,14 @@ export const GraduationAdminColumns: DataTableColumn<GraduationWithStudentOutput
     header: ({ column }) => <DataTableHeader title='Nama' column={column} />,
     cell: (info) => <span className='uppercase'>{info.getValue()}</span>,
   }),
+  GraduationAdminColumnHelper.accessor('size', {
+    header: ({ column }) => <DataTableHeader title='Mata Pelajaran' column={column} />,
+    size: 50,
+    cell: (info) => info.getValue(),
+  }),
+  GraduationAdminColumnHelper.accessor('average', {
+    header: ({ column }) => <DataTableHeader title='Rata-rata' column={column} />,
+    size: 50,
+    cell: (info) => info.getValue(),
+  }),
 ]

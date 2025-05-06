@@ -3,7 +3,6 @@ import { StudentCollection } from "../firestore"
 import { getDocs } from "firebase/firestore"
 import { StudentOutputParse, StudentOutputSchema } from "../schema"
 import { v4 } from "uuid"
-import { z } from "zod"
 import { useLocal } from "@/lib/local/hook"
 
 export const useStudentData = ({ disabled, online }: UseQueryHookProps<{}>): UseQueryHookResults<StudentOutputSchema> => {
@@ -14,7 +13,7 @@ export const useStudentData = ({ disabled, online }: UseQueryHookProps<{}>): Use
     queryFn: async () => {
       const snapshot = await getDocs(StudentCollection())
       return {
-        results: z.array(StudentOutputSchema).parse(snapshot.docs.map(doc => StudentOutputParse(doc.data(), doc.id))),
+        results: snapshot.docs.map(doc => StudentOutputParse(doc.data(), doc.id)),
         token: v4()
       }
     },

@@ -1,7 +1,9 @@
 import { FirebaseDate } from "@/lib/zod"
 import { parse } from "date-fns"
 import { z } from "zod"
-import { StudentOutputSchema } from "../student/schema"
+import { StudentDefault, StudentOutputParse, StudentOutputSchema } from "../student/schema"
+import { v4 } from "uuid"
+import { RombelOutputSchema } from "../rombel/schema"
 
 export type GraduationSchema = {
   code: string
@@ -38,17 +40,20 @@ export const GraduationDefault = (): GraduationSchema => ({
 export type GraduationOutputSchema = GraduationSchema & {
   master: number
   date: Date
+  uid: string
 }
 
 export const GraduationOutputSchema: z.ZodType<GraduationOutputSchema> = GraduationSchema.extend({
   master: z.number({ coerce: true }),
-  date: z.date({ coerce: true })
+  date: z.date({ coerce: true }),
+  uid: z.string()
 })
 
 export const GraduationOutputParse = (row: GraduationSchema, ids: string): GraduationOutputSchema => {
   const [master, ...date] = ids.split("-")
   return GraduationOutputSchema.safeParse({
     ...row,
+    uid: ids,
     master,
     date: parse(
       date.join("-"),
@@ -57,6 +62,7 @@ export const GraduationOutputParse = (row: GraduationSchema, ids: string): Gradu
     ),
   })?.data ?? {
     ...GraduationDefault(),
+    uid: ids,
     master: 0,
     date: new Date("2000-01-01"),
   };
@@ -64,15 +70,36 @@ export const GraduationOutputParse = (row: GraduationSchema, ids: string): Gradu
 
 export type GraduationWithStudentOutputSchema = GraduationOutputSchema & {
   student: StudentOutputSchema
+  rombel: RombelOutputSchema | null
+  size: number
+  average: number
 }
 
 export const GraduationWithStudentOutputSchema: z.ZodType<GraduationWithStudentOutputSchema> = GraduationSchema.extend({
   master: z.number({ coerce: true }),
   date: z.date({ coerce: true }),
-  student: StudentOutputSchema
+  uid: z.string(),
+  student: StudentOutputSchema,
+  rombel: RombelOutputSchema.nullable(),
+  size: z.number(),
+  average: z.number(),
+
 })
 
-export const GraduationWithStudentOutputParse = (graduation: GraduationOutputSchema, student: StudentOutputSchema): GraduationWithStudentOutputSchema => ({
-  ...graduation,
-  student
-})
+type GraduationWithStudentOutputParseProps = {
+  graduation: GraduationOutputSchema
+  student: StudentOutputSchema | null
+  rombel: RombelOutputSchema | null
+}
+
+export const GraduationWithStudentOutputParse = ({ graduation, student, rombel }: GraduationWithStudentOutputParseProps): GraduationWithStudentOutputSchema => {
+  const size = Object.keys(graduation.values).length
+  const average = Object.values(graduation.values).reduce((a, b) => a + b, 0) / size
+  return {
+    ...graduation,
+    student: student ?? StudentOutputParse(StudentDefault(), v4()),
+    rombel,
+    size,
+    average: !average ? 0 : parseFloat(average.toFixed(2)),
+  }
+}

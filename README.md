@@ -64,12 +64,47 @@ src/
 3. Create a `.env` file in the root directory and add your Firebase config:
 
    ```env
-   VITE_FIREBASE_API_KEY=your-api-key
-   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-bucket.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   VITE_FIREBASE_APP_ID=your-app-id
+   # Environment variables for application
+
+   ```env
+   # Application Info
+   VITE_APP_NAME_SHORT=""           # string, short app name (e.g. "SMS")
+   VITE_APP_NAME=""                 # string, full app name (e.g. "School Management System")
+   VITE_APP_LEVEL=""                # string, education level (e.g. "smk")
+   VITE_APP_VERSION=""              # string/number, app version (e.g. "1")
+   VITE_APP_FORCE_ONLINE=""         # boolean ("true"/"false"), force online mode
+   APP_EMAIL_ADMIN=""               # string, admin email address
+
+   # Recaptcha Configuration
+   VITE_RECAPTCHA_SITE_KEY=""       # string, reCAPTCHA site key
+   RECAPTCHA_SECRET_KEY=""          # string, reCAPTCHA secret key
+
+   # Firebase Configuration
+   VITE_FIREBASE_EMULATOR=""                # boolean ("true"/"false"), use Firebase emulator
+   VITE_FIREBASE_API_KEY=""                 # string, Firebase API key
+   VITE_FIREBASE_AUTH_DOMAIN=""             # string, Firebase Auth domain
+   VITE_FIREBASE_PROJECT_ID=""              # string, Firebase project ID
+   VITE_FIREBASE_STORAGE_BUCKET=""          # string, Firebase storage bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=""     # string, Firebase messaging sender ID
+   VITE_FIREBASE_APP_ID=""                  # string, Firebase app ID
+   VITE_FIREBASE_MEASUREMENT_ID=""          # string, Firebase measurement ID
+   VITE_FIREBASE_VAP_ID=""                  # string, Firebase VAP ID
+   VITE_FIREBASE_SENDER_ID=""               # string, Firebase sender ID
+
+   # Features Configuration
+   VITE_FEATURE_DOC_ADDRESS=""              # string, document address
+   VITE_FEATURE_HEAD_NAME=""                # string, headmaster/principal name
+   VITE_FEATURE_HEAD_CODE=""                # string, headmaster/principal code (e.g. NUPTK)
+   VITE_FEATURE_YEAR_ACTIVE=""              # string/number, active year (e.g. "2024")
+   VITE_FEATURE_GRADUATION=""               # boolean ("true"/"false"), graduation feature enabled
+   VITE_FEATURE_GRADUATION_DATE=""          # string (YYYY-MM-DD HH:mm:ss), graduation date
+   VITE_FEATURE_GRADUATION_DOC=""           # boolean ("true"/"false"), graduation doc enabled
+   VITE_FEATURE_GRADUATION_DOC_DESCRIPTION="" # string, graduation doc description
+   ```
+
+   > **Info:**  
+   > - Ganti nilai variabel di atas sesuai kebutuhan Anda.  
+   > - Lihat dokumentasi atau file `.env.example` untuk penjelasan setiap variabel.
    ```
 
 4. Run the development server:

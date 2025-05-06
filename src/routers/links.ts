@@ -23,7 +23,23 @@ export const links = route({
       path: "admin",
       children: {
         graduation: route({
-          path: "graduation"
+          path: "graduation",
+          children: {
+            list: route({
+              path: "list",
+            }),
+            doc: route({
+              path: "doc/:docId",
+              params: {
+                docId: string(),
+              },
+              children: {
+                description: route({
+                  path: "description",
+                })
+              }
+            })
+          }
         })
       }
     }),

@@ -4,7 +4,7 @@ import { isValid } from "date-fns";
 import GraduationForm from "./components/form";
 import ThemeButton from "../_theme/components/button";
 
-const date = new Date() // new Date(import.meta.env.VITE_FEATURE_GRADUATION_DATE);
+const date = new Date(import.meta.env.VITE_FEATURE_GRADUATION_DATE);
 const active =
   import.meta.env.VITE_FEATURE_GRADUATION === "true" && isValid(date);
 

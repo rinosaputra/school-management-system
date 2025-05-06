@@ -1,11 +1,11 @@
 import { getDocs } from "firebase/firestore"
 import { v4 } from "uuid"
 import { GraduationCollection } from "../../firestore"
-import { GraduationOutputParse, GraduationOutputSchema, GraduationWithStudentOutputSchema } from "../../schema"
+import { GraduationOutputParse, GraduationOutputSchema, GraduationWithStudentOutputParse, GraduationWithStudentOutputSchema } from "../../schema"
 import { useQuery } from "@tanstack/react-query"
 import { useStudentData } from "@/features/student/hook"
-import { StudentDefault, StudentOutputParse } from "@/features/student/schema"
 import { useLocal } from "@/lib/local/hook"
+import { useRombelData } from "@/features/rombel/hook"
 
 export const getGraduationData = async () => {
   const snapshot = await getDocs(GraduationCollection({
@@ -44,16 +44,20 @@ export const useGraduationData = ({ disabled, online }: UseQueryHookProps<{}>): 
 export const useGraduationWithStudentData = (props: UseQueryHookProps<{}>): UseQueryHookResults<GraduationWithStudentOutputSchema> => {
   const graduations = useGraduationData(props)
   const students = useStudentData(props)
-  const uid = graduations.token + students.token
-  if (graduations.isLoading || students.isLoading) return { isLoading: true, data: [], token: uid }
+  const rombels = useRombelData(props)
+  const uid = graduations.token + students.token + rombels.token
+  if (graduations.isLoading || students.isLoading || rombels.isLoading) return { isLoading: true, data: [], token: uid }
   return {
     isLoading: false,
     data: graduations.data?.map<GraduationWithStudentOutputSchema>(graduation => {
-      return {
-        ...graduation,
-        student: students.data?.find(student => student.uid === graduation.studentId) ?? StudentOutputParse(StudentDefault(), v4()),
-      }
-    }) ?? [],
+      const student = students.data?.find(student => student.uid === graduation.studentId) ?? null
+      return GraduationWithStudentOutputParse({
+        graduation,
+        student,
+        rombel: !student ? null : rombels.data?.find(rombel => rombel.uid === student.rombelId) ?? null,
+      })
+    }
+    ) ?? [],
     token: uid,
   }
 }

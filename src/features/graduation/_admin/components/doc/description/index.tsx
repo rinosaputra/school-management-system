@@ -25,7 +25,6 @@ type GraduationAdminDocDescriptionProps = {
 
 
 const GraduationAdminDocDescription: React.FC<GraduationAdminDocDescriptionProps> = ({ open, onOpenChange, result }) => {
-
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent>
@@ -40,15 +39,18 @@ const GraduationAdminDocDescription: React.FC<GraduationAdminDocDescriptionProps
         </div>
         <SheetFooter>
           <div className='flex justify-end space-x-2'>
-            {!result ? null : <Link to={links.admin.graduation.doc.description.$buildPath({
-              params: {
-                docId: result.uid,
-              }
-            })} className={buttonVariants({ variant: 'outline', size: "icon" })}>
+            {!result ? null : <Link
+              className={buttonVariants({ variant: 'outline', size: "icon" })}
+              to={links.admin.graduation.doc.description.$buildPath({
+                params: {
+                  docId: result.uid,
+                }
+              })}
+            >
               <Eye />
             </Link>}
             <SheetClose asChild>
-              <Button type="submit" className='flex-1'>Save changes</Button>
+              <Button className='flex-1'>Tutup</Button>
             </SheetClose>
           </div>
         </SheetFooter>

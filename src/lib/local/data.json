@@ -1,7 +1,7 @@
 {
   "version": "1",
-  "created": "2025-05-06T21:24:02.996Z",
-  "token": "fcb1ba1c-af58-41a6-95ee-6ea626a9cc9c",
+  "created": "2025-05-13T12:44:22.243Z",
+  "token": "4f493cec-6f8a-48ba-930f-8551327fae02",
   "results": {
     "student": {
       "00936545-a843-4b59-826a-ba44401ed467": {
@@ -14754,7 +14754,22 @@
       "3031301675-2003-07-01": {
         "code": "01-156-071",
         "studentId": "85ed38a9-2c38-4de8-8744-5b05b1905286",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 87,
+          "agama": 79,
+          "bing": 84,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 85,
+          "simdig": 79,
+          "blam": 92,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -14814,7 +14829,22 @@
       "3061555301-2006-03-09": {
         "code": "01-156-133",
         "studentId": "3b87572a-bdae-4ca2-be7f-b0fe5234a885",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 76,
+          "agama": 78,
+          "bing": 79,
+          "sb": 82,
+          "kimia": 88,
+          "pkn": 85,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -14823,7 +14853,22 @@
       "3071801584-2007-03-06": {
         "code": "01-156-017",
         "studentId": "2a292840-c21f-4fe0-b299-af879964d7c2",
-        "values": {},
+        "values": {
+          "kk": 81.5,
+          "pjok": 76.25,
+          "bindo": 75.83,
+          "fisika": 75.67,
+          "mtk": 75.5,
+          "agama": 77.83,
+          "pkwu": 77.25,
+          "bing": 77.33,
+          "sb": 77.17,
+          "kimia": 80.5,
+          "pkn": 78.17,
+          "simdig": 83.5,
+          "sejarah": 75.83,
+          "dpk": 78.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -14859,8 +14904,6 @@
         "code": "01-156-095",
         "studentId": "7e090db0-d340-4c90-b627-506039612689",
         "values": {
-          "kk": 78,
-          "pjok": 76,
           "bindo": 78.67,
           "fisika": 75.5,
           "mtk": 78.67,
@@ -14874,7 +14917,9 @@
           "blam": 72.5,
           "sejarah": 77.5,
           "ipa": 72.5,
-          "dpk": 78
+          "kk": 78.83,
+          "pjok": 76.35,
+          "dpk": 78.33
         },
         "dates": {
           "print": null,
@@ -14960,7 +15005,22 @@
       "3077637964-2007-07-19": {
         "code": "01-156-047",
         "studentId": "cbb6b532-5499-4634-b6aa-2939b3e52a1d",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 75,
+          "agama": 79,
+          "bing": 84,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 87,
+          "simdig": 79,
+          "blam": 93,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -14969,7 +15029,23 @@
       "3079154928-2007-02-24": {
         "code": "01-156-156",
         "studentId": "d98f7f13-83aa-4d64-857e-c7180f8f490b",
-        "values": {},
+        "values": {
+          "kk": 82.17,
+          "pjok": 84.67,
+          "bindo": 85.17,
+          "fisika": 80.33,
+          "mtk": 80.33,
+          "agama": 80.33,
+          "pkwu": 82.67,
+          "bing": 80.83,
+          "sb": 90.15,
+          "kimia": 80.67,
+          "pkn": 83.67,
+          "simdig": 79.17,
+          "blam": 92.33,
+          "sejarah": 94.5,
+          "dpk": 82.35
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15003,7 +15079,22 @@
       "52159623-2005-05-07": {
         "code": "01-156-110",
         "studentId": "fbf75815-f6e6-4c5a-b207-2b03b0f08c04",
-        "values": {},
+        "values": {
+          "kk": 76.83,
+          "pjok": 74.75,
+          "bindo": 74.83,
+          "fisika": 74.5,
+          "mtk": 74.83,
+          "agama": 76.83,
+          "pkwu": 74.75,
+          "bing": 74.67,
+          "sb": 72.5,
+          "kimia": 74.25,
+          "pkn": 75.5,
+          "simdig": 76.33,
+          "sejarah": 78.5,
+          "dpk": 76.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15072,14 +15163,14 @@
           "agama": 76.33,
           "pkwu": 78.5,
           "bing": 74.33,
-          "sb": 71,
-          "kimia": 73,
           "pkn": 75.83,
-          "simdig": 75,
-          "blam": 73,
           "sejarah": 73.5,
-          "ipa": 73,
-          "dpk": 75.5
+          "dpk": 75.5,
+          "kimia": 73.15,
+          "simdig": 75.35,
+          "blam": 73.5,
+          "ipa": 73.33,
+          "sb": 71.67
         },
         "dates": {
           "print": null,
@@ -15089,7 +15180,22 @@
       "55144096-2005-09-15": {
         "code": "01-156-148",
         "studentId": "4fb5cef5-6965-4fa8-b021-aa570eadaa70",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 76.25,
+          "bindo": 75.83,
+          "fisika": 75.5,
+          "mtk": 75.67,
+          "agama": 76.67,
+          "pkwu": 77.33,
+          "bing": 75.67,
+          "sb": 72.5,
+          "kimia": 71.25,
+          "pkn": 67.17,
+          "simdig": 80.25,
+          "sejarah": 72.5,
+          "dpk": 79.83
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15098,7 +15204,22 @@
       "56046133-2005-01-16": {
         "code": "01-156-048",
         "studentId": "1c793ce3-1433-4d19-8677-96ddc087197c",
-        "values": {},
+        "values": {
+          "kk": 80.5,
+          "pjok": 77.75,
+          "bindo": 77.5,
+          "fisika": 82.5,
+          "mtk": 77.25,
+          "agama": 78.25,
+          "pkwu": 83.75,
+          "bing": 78.5,
+          "sb": 80.15,
+          "kimia": 78.15,
+          "pkn": 82.5,
+          "simdig": 80.1,
+          "sejarah": 85.83,
+          "dpk": 80.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15107,7 +15228,22 @@
       "57829972-2004-09-23": {
         "code": "01-156-075",
         "studentId": "fdbaffd9-0c4a-4fc5-9c63-5daaf489ebee",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 76,
+          "agama": 78,
+          "bing": 79,
+          "sb": 82,
+          "kimia": 88,
+          "pkn": 85,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15116,7 +15252,22 @@
       "61071925-2006-11-20": {
         "code": "01-156-131",
         "studentId": "1f524286-eccc-43e2-b578-b6bb24dc7c89",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 80,
+          "bing": 76,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 80,
+          "simdig": 78,
+          "blam": 90,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15178,22 +15329,22 @@
         "code": "01-156-006",
         "studentId": "25691f09-a50c-4f7c-9b9b-b79a4567a893",
         "values": {
-          "kk": 77,
-          "pjok": 76,
           "bindo": 77.83,
           "fisika": 73.5,
           "mtk": 75.17,
           "agama": 77.67,
-          "pkwu": 81,
           "bing": 76.83,
           "sb": 72.5,
-          "kimia": 72,
           "pkn": 77.67,
-          "simdig": 74,
-          "blam": 72,
           "sejarah": 72.5,
-          "ipa": 72,
-          "dpk": 77
+          "kk": 77.35,
+          "pjok": 76.83,
+          "kimia": 72.33,
+          "simdig": 74.83,
+          "blam": 72.35,
+          "ipa": 72.5,
+          "pkwu": 81.25,
+          "dpk": 77.15
         },
         "dates": {
           "print": null,
@@ -15234,16 +15385,18 @@
           "bindo": 74.17,
           "fisika": 72.5,
           "mtk": 74.67,
-          "agama": 76,
-          "pkwu": 78,
           "bing": 73.17,
-          "sb": 71,
-          "kimia": 72,
           "pkn": 74.17,
-          "simdig": 75,
-          "blam": 72,
           "sejarah": 72.5,
-          "ipa": 72
+          "kk": 81.83,
+          "kimia": 72.33,
+          "simdig": 75.17,
+          "agama": 76.33,
+          "blam": 72.67,
+          "ipa": 72.33,
+          "pkwu": 78.67,
+          "dpk": 81.67,
+          "sb": 71.25
         },
         "dates": {
           "print": null,
@@ -15253,7 +15406,22 @@
       "61798217-2006-08-20": {
         "code": "01-156-065",
         "studentId": "11a64473-1f28-4355-9a1c-dd8760670a04",
-        "values": {},
+        "values": {
+          "kk": 80.15,
+          "pjok": 76.25,
+          "bindo": 76.17,
+          "fisika": 85.83,
+          "mtk": 76.5,
+          "agama": 78.33,
+          "pkwu": 79.5,
+          "bing": 75.5,
+          "sb": 79.33,
+          "kimia": 75.67,
+          "pkn": 76.5,
+          "simdig": 80.5,
+          "sejarah": 74.5,
+          "dpk": 80.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15287,7 +15455,22 @@
       "62431488-2006-04-14": {
         "code": "01-156-026",
         "studentId": "fe69c863-3ef8-426e-b546-e4dbecff582b",
-        "values": {},
+        "values": {
+          "kk": 79.5,
+          "pjok": 75.77,
+          "bindo": 75.33,
+          "fisika": 80.15,
+          "mtk": 75.5,
+          "agama": 76.5,
+          "pkwu": 78.33,
+          "bing": 75.67,
+          "sb": 75.67,
+          "kimia": 75.83,
+          "pkn": 75.33,
+          "simdig": 75.5,
+          "sejarah": 73.5,
+          "dpk": 82.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15355,16 +15538,16 @@
           "fisika": 72.5,
           "mtk": 73.67,
           "agama": 76.17,
-          "pkwu": 80,
           "bing": 75.83,
-          "sb": 71,
           "kimia": 71.5,
           "pkn": 75.83,
-          "simdig": 74,
           "blam": 71.5,
           "sejarah": 75.5,
           "ipa": 71.5,
-          "dpk": 79.5
+          "dpk": 79.5,
+          "simdig": 74.5,
+          "pkwu": 80.25,
+          "sb": 71.25
         },
         "dates": {
           "print": null,
@@ -15450,7 +15633,22 @@
       "63378282-2006-08-26": {
         "code": "01-156-040",
         "studentId": "d3f648fe-1c52-47ed-a4ac-45af71c02bdd",
-        "values": {},
+        "values": {
+          "kk": 82,
+          "pjok": 82,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 76,
+          "agama": 77,
+          "bing": 79,
+          "sb": 85,
+          "kimia": 88,
+          "pkn": 90,
+          "simdig": 78,
+          "blam": 94,
+          "sejarah": 85,
+          "dpk": 82
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15484,7 +15682,22 @@
       "63451123-2006-08-15": {
         "code": "01-156-078",
         "studentId": "0408c48d-b98b-4792-8594-c19e09013514",
-        "values": {},
+        "values": {
+          "kk": 82,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 87,
+          "agama": 80,
+          "bing": 79,
+          "sb": 85,
+          "kimia": 88,
+          "pkn": 87,
+          "simdig": 78,
+          "blam": 94,
+          "sejarah": 85,
+          "dpk": 82
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15498,16 +15711,18 @@
           "bindo": 73.67,
           "fisika": 72.5,
           "mtk": 74.83,
-          "agama": 76,
           "pkwu": 78.5,
           "bing": 73.83,
-          "sb": 71,
-          "kimia": 73,
           "pkn": 75.17,
-          "simdig": 75,
-          "blam": 73,
           "sejarah": 73.5,
-          "ipa": 73
+          "kk": 81.17,
+          "kimia": 73.5,
+          "simdig": 75.67,
+          "agama": 76.83,
+          "blam": 73.25,
+          "ipa": 73.15,
+          "dpk": 81.25,
+          "sb": 71.25
         },
         "dates": {
           "print": null,
@@ -15595,7 +15810,22 @@
       "64014012-2006-06-26": {
         "code": "01-156-058",
         "studentId": "6a0e9115-d03b-4854-9974-9463c797d155",
-        "values": {},
+        "values": {
+          "kk": 81.33,
+          "pjok": 76.5,
+          "bindo": 75.67,
+          "fisika": 75.15,
+          "mtk": 76.5,
+          "agama": 77.5,
+          "pkwu": 77.75,
+          "bing": 76.5,
+          "sb": 77.5,
+          "kimia": 75.33,
+          "pkn": 80.33,
+          "simdig": 80.5,
+          "sejarah": 74.67,
+          "dpk": 74.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15681,7 +15911,22 @@
       "64555240-2007-05-21": {
         "code": "01-156-166",
         "studentId": "cc497b49-1e2a-4b72-979e-bb0d78891df9",
-        "values": {},
+        "values": {
+          "kk": 80.17,
+          "pjok": 74.75,
+          "bindo": 76.5,
+          "fisika": 74.25,
+          "mtk": 75.67,
+          "agama": 77.67,
+          "pkwu": 79.25,
+          "bing": 75.5,
+          "sb": 74.15,
+          "kimia": 75.17,
+          "pkn": 77.67,
+          "simdig": 80.75,
+          "sejarah": 77.83,
+          "dpk": 79.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15690,7 +15935,22 @@
       "64743420-2006-12-27": {
         "code": "01-156-086",
         "studentId": "513377b8-5568-42c1-a698-6370adacdf3a",
-        "values": {},
+        "values": {
+          "kk": 75.67,
+          "pjok": 71.75,
+          "bindo": 73.17,
+          "fisika": 70.25,
+          "mtk": 73.45,
+          "agama": 75.67,
+          "pkwu": 74.75,
+          "bing": 73.67,
+          "sb": 75.83,
+          "kimia": 70.17,
+          "pkn": 77.83,
+          "simdig": 75.33,
+          "sejarah": 73.5,
+          "dpk": 75.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15725,7 +15985,22 @@
       "64861048-2006-09-03": {
         "code": "01-156-030",
         "studentId": "cb47faa2-1aee-4d99-a569-d6ce87de1e9f",
-        "values": {},
+        "values": {
+          "kk": 82.5,
+          "pjok": 76.5,
+          "bindo": 75.17,
+          "fisika": 75.25,
+          "mtk": 75.33,
+          "agama": 76.83,
+          "pkwu": 79.83,
+          "bing": 75.33,
+          "sb": 76.15,
+          "kimia": 78.5,
+          "pkn": 76.17,
+          "simdig": 79.33,
+          "sejarah": 73.5,
+          "dpk": 80.83
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15888,7 +16163,22 @@
       "66626177-2006-11-26": {
         "code": "01-156-011",
         "studentId": "505e6bf8-682d-43bd-96ce-5414ee7000ad",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 77.25,
+          "bindo": 75.33,
+          "fisika": 80.17,
+          "mtk": 76.33,
+          "agama": 77.67,
+          "pkwu": 77.5,
+          "bing": 76.17,
+          "sb": 74.5,
+          "kimia": 75.5,
+          "pkn": 77.17,
+          "simdig": 77.5,
+          "sejarah": 77.5,
+          "dpk": 80.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15897,7 +16187,22 @@
       "66779040-2006-12-07": {
         "code": "01-156-010",
         "studentId": "6401c902-f6e8-4380-b3a8-f37815e97f32",
-        "values": {},
+        "values": {
+          "kk": 80.33,
+          "pjok": 77.77,
+          "bindo": 78.83,
+          "fisika": 72.67,
+          "mtk": 74.17,
+          "agama": 75.17,
+          "pkwu": 75.25,
+          "bing": 74.67,
+          "sb": 76.15,
+          "kimia": 79.33,
+          "pkn": 76.25,
+          "simdig": 82.5,
+          "sejarah": 78.33,
+          "dpk": 80.17
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15906,7 +16211,22 @@
       "66814789-2006-11-05": {
         "code": "01-156-002",
         "studentId": "db3f5b8c-3bb4-4086-a33d-9cfc428df8ec",
-        "values": {},
+        "values": {
+          "kk": 79.83,
+          "pjok": 77.75,
+          "bindo": 77.67,
+          "fisika": 70.67,
+          "mtk": 76.67,
+          "agama": 77.17,
+          "pkwu": 80.25,
+          "bing": 77.33,
+          "sb": 77.5,
+          "kimia": 70.83,
+          "pkn": 78.33,
+          "simdig": 80.33,
+          "sejarah": 70.25,
+          "dpk": 80.15
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15915,7 +16235,22 @@
       "66853402-2005-12-11": {
         "code": "01-156-122",
         "studentId": "885e9eba-93bf-480a-a079-15e966e89afd",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 77.75,
+          "bindo": 77.67,
+          "fisika": 80.83,
+          "mtk": 76.5,
+          "agama": 76.83,
+          "pkwu": 79.25,
+          "bing": 75.67,
+          "sb": 79.67,
+          "kimia": 76.15,
+          "pkn": 78.5,
+          "simdig": 80.33,
+          "sejarah": 77.5,
+          "dpk": 82.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -15949,7 +16284,22 @@
       "67843005-2006-06-19": {
         "code": "01-156-081",
         "studentId": "aa6cd93c-baec-4880-9197-120c14e52ae1",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 75.33,
+          "bindo": 77.83,
+          "fisika": 73.5,
+          "mtk": 76.5,
+          "agama": 78.33,
+          "pkwu": 78.17,
+          "bing": 76.25,
+          "sb": 75.83,
+          "kimia": 81.5,
+          "pkn": 76.17,
+          "simdig": 77.5,
+          "sejarah": 72.5,
+          "dpk": 80.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16010,7 +16360,22 @@
       "68370262-2006-05-09": {
         "code": "01-156-117",
         "studentId": "0afc62a0-a33e-4585-a095-c72976ac61e6",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 76,
+          "agama": 77,
+          "bing": 79,
+          "sb": 85,
+          "kimia": 88,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 93,
+          "sejarah": 85,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16045,7 +16410,22 @@
       "68700365-2006-03-01": {
         "code": "01-156-179",
         "studentId": "cfdd9e02-2433-40f0-b0e5-ac204f47a694",
-        "values": {},
+        "values": {
+          "kk": 82.5,
+          "pjok": 76.5,
+          "bindo": 74.83,
+          "fisika": 74.25,
+          "mtk": 75.67,
+          "agama": 76.35,
+          "pkwu": 76.75,
+          "bing": 73.83,
+          "sb": 76.5,
+          "kimia": 74.15,
+          "pkn": 76.17,
+          "simdig": 80.83,
+          "sejarah": 74.83,
+          "dpk": 80.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16080,7 +16460,22 @@
       "69387128-2006-12-23": {
         "code": "01-156-120",
         "studentId": "b77da99e-9307-492e-bb4e-2fcad2f7a3ce",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 79,
+          "bing": 82,
+          "sb": 80,
+          "kimia": 88,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 93,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16098,7 +16493,22 @@
       "69623262-2006-12-19": {
         "code": "01-156-153",
         "studentId": "01d12358-b9a5-4b39-ac68-faa011dc1e23",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 87,
+          "agama": 80,
+          "bing": 77,
+          "sb": 85,
+          "kimia": 88,
+          "pkn": 80,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 85,
+          "dpk": 80
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16133,7 +16543,23 @@
       "69969425-2006-04-07": {
         "code": "01-156-182",
         "studentId": "dae8a6c8-cb74-4a7b-b80a-41c66b7d0da2",
-        "values": {},
+        "values": {
+          "kk": 81.67,
+          "pjok": 80.33,
+          "bindo": 85.17,
+          "fisika": 79.5,
+          "mtk": 80.33,
+          "agama": 79.25,
+          "pkwu": 81.15,
+          "bing": 82.5,
+          "sb": 92.5,
+          "kimia": 79.67,
+          "pkn": 80.67,
+          "simdig": 78.17,
+          "blam": 92.25,
+          "sejarah": 93.83,
+          "dpk": 81.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16168,7 +16594,22 @@
       "71039103-2007-10-29": {
         "code": "01-156-088",
         "studentId": "6befd9ce-88ba-4ecf-b164-d7fa7bc5fc67",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 76,
+          "agama": 80,
+          "bing": 77,
+          "sb": 82,
+          "kimia": 87,
+          "pkn": 80,
+          "simdig": 78,
+          "blam": 90,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16203,7 +16644,23 @@
       "71355878-2007-08-20": {
         "code": "01-156-174",
         "studentId": "a291c38f-6a28-4b77-8953-ea1c5c6c5714",
-        "values": {},
+        "values": {
+          "kk": 81.67,
+          "pjok": 82.67,
+          "bindo": 85.67,
+          "fisika": 80.83,
+          "mtk": 77.25,
+          "agama": 77.33,
+          "pkwu": 81.25,
+          "bing": 82.83,
+          "sb": 92.35,
+          "kimia": 79.67,
+          "pkn": 80.15,
+          "simdig": 79.17,
+          "blam": 88.83,
+          "sejarah": 93.67,
+          "dpk": 81.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16220,13 +16677,15 @@
           "agama": 78.17,
           "pkwu": 78.67,
           "bing": 74.33,
-          "sb": 75,
           "kimia": 74.5,
           "pkn": 77.17,
           "simdig": 75.5,
           "blam": 74.5,
           "sejarah": 78.5,
-          "ipa": 74.5
+          "ipa": 74.5,
+          "kk": 81.25,
+          "dpk": 81.67,
+          "sb": 75.67
         },
         "dates": {
           "print": null,
@@ -16313,7 +16772,22 @@
       "71938280-2007-04-11": {
         "code": "01-156-005",
         "studentId": "37bf2398-643f-4417-888d-4a176c6bade9",
-        "values": {},
+        "values": {
+          "kk": 77.67,
+          "pjok": 75.5,
+          "bindo": 73.7,
+          "fisika": 72.33,
+          "mtk": 73.5,
+          "agama": 74.83,
+          "pkwu": 74.75,
+          "bing": 74.67,
+          "sb": 75.5,
+          "kimia": 76.5,
+          "pkn": 75.83,
+          "simdig": 79.5,
+          "sejarah": 77.5,
+          "dpk": 76.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16348,7 +16822,22 @@
       "71993198-2007-08-23": {
         "code": "01-156-036",
         "studentId": "7ba82113-f228-4334-a44b-4e7793b101ec",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 76,
+          "agama": 78,
+          "bing": 77,
+          "sb": 82,
+          "kimia": 87,
+          "pkn": 85,
+          "simdig": 78,
+          "blam": 91,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16409,7 +16898,22 @@
       "72073451-2007-01-16": {
         "code": "01-156-177",
         "studentId": "6037f609-4c67-4f3e-8113-e5d9adcbdb4a",
-        "values": {},
+        "values": {
+          "kk": 82.5,
+          "pjok": 75.75,
+          "bindo": 74.33,
+          "fisika": 70.67,
+          "mtk": 75.17,
+          "agama": 75.33,
+          "pkwu": 76.33,
+          "bing": 74.5,
+          "sb": 75.83,
+          "kimia": 71.83,
+          "pkn": 75.33,
+          "simdig": 82.5,
+          "sejarah": 73.67,
+          "dpk": 80.15
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16495,22 +16999,22 @@
         "code": "01-156-100",
         "studentId": "686a647d-9ada-4bea-8bf2-c1301da3da5c",
         "values": {
-          "kk": 77,
-          "pjok": 76,
           "bindo": 77.83,
           "fisika": 73.5,
           "mtk": 75.17,
           "agama": 77.67,
-          "pkwu": 81,
           "bing": 76.83,
           "sb": 72.5,
-          "kimia": 72,
           "pkn": 76.67,
-          "simdig": 74,
-          "blam": 72,
           "sejarah": 72.5,
-          "ipa": 72,
-          "dpk": 77
+          "kk": 77.67,
+          "pjok": 76.5,
+          "kimia": 72.33,
+          "simdig": 74.25,
+          "blam": 72.15,
+          "ipa": 72.35,
+          "pkwu": 81.17,
+          "dpk": 77.5
         },
         "dates": {
           "print": null,
@@ -16520,7 +17024,22 @@
       "72612257-2007-06-13": {
         "code": "01-156-141",
         "studentId": "fb2f0b47-3d3a-4f2c-aee1-dc5471ecd137",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 84,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 78,
+          "bing": 79,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 80,
+          "simdig": 79,
+          "blam": 93,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16607,7 +17126,22 @@
       "73071486-2008-08-04": {
         "code": "01-156-128",
         "studentId": "7c137807-1fd9-4a3e-9a6f-947de170501d",
-        "values": {},
+        "values": {
+          "kk": 75.5,
+          "pjok": 75.25,
+          "bindo": 76.67,
+          "fisika": 75.83,
+          "mtk": 75.33,
+          "agama": 76.35,
+          "pkwu": 76.25,
+          "bing": 75.17,
+          "sb": 77.5,
+          "kimia": 75.5,
+          "pkn": 75.5,
+          "simdig": 73.5,
+          "sejarah": 74.15,
+          "dpk": 74.25
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16641,7 +17175,22 @@
       "73120591-2007-10-13": {
         "code": "01-156-125",
         "studentId": "01d892f0-9cee-4452-8724-02d3e1166884",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 78,
+          "bing": 79,
+          "sb": 80,
+          "kimia": 88,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 93,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16726,7 +17275,22 @@
       "73426125-2007-05-16": {
         "code": "01-156-050",
         "studentId": "5c5d1ce2-1b59-4ca1-a44f-53d07d86fc56",
-        "values": {},
+        "values": {
+          "kk": 82,
+          "pjok": 82,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 87,
+          "agama": 80,
+          "bing": 84,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 83,
+          "simdig": 80,
+          "blam": 94,
+          "sejarah": 80,
+          "dpk": 82
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16735,7 +17299,22 @@
       "73650177-2008-01-25": {
         "code": "01-156-014",
         "studentId": "068e8b6f-1f41-44a8-a38b-cab73037b591",
-        "values": {},
+        "values": {
+          "kk": 78.5,
+          "pjok": 75.25,
+          "bindo": 75.33,
+          "fisika": 75.33,
+          "mtk": 76.5,
+          "agama": 78.5,
+          "pkwu": 78.25,
+          "bing": 76.33,
+          "sb": 76.5,
+          "kimia": 78.5,
+          "pkn": 77.33,
+          "simdig": 82.67,
+          "sejarah": 74.17,
+          "dpk": 77.8
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16744,7 +17323,22 @@
       "73758039-2007-11-27": {
         "code": "01-156-063",
         "studentId": "3845093e-207c-4224-8933-28c0fc70f310",
-        "values": {},
+        "values": {
+          "kk": 82.67,
+          "pjok": 76.5,
+          "bindo": 75.17,
+          "fisika": 75.83,
+          "mtk": 80.35,
+          "agama": 76.33,
+          "pkwu": 77.15,
+          "bing": 75.33,
+          "sb": 77.5,
+          "kimia": 78.25,
+          "pkn": 77.83,
+          "simdig": 79.5,
+          "sejarah": 74.5,
+          "dpk": 74.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16805,7 +17399,22 @@
       "74252345-2007-05-14": {
         "code": "01-156-173",
         "studentId": "503255be-5b85-43b8-b5ad-aa3d18ddc938",
-        "values": {},
+        "values": {
+          "kk": 80.67,
+          "pjok": 77.25,
+          "bindo": 77.33,
+          "fisika": 80.25,
+          "mtk": 76.17,
+          "agama": 78.67,
+          "pkwu": 78.17,
+          "bing": 75.17,
+          "sb": 73.5,
+          "kimia": 75.33,
+          "pkn": 78.83,
+          "simdig": 82.5,
+          "sejarah": 70.25,
+          "dpk": 79.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16840,7 +17449,22 @@
       "74512308-2007-12-15": {
         "code": "01-156-001",
         "studentId": "13717583-809d-4000-8422-cb26dfbbd0bc",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 75,
+          "agama": 79,
+          "bing": 78,
+          "sb": 85,
+          "kimia": 87,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 90,
+          "sejarah": 85,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16927,7 +17551,22 @@
       "74681824-2007-05-30": {
         "code": "01-156-013",
         "studentId": "fcc0b64b-d541-4412-86d2-e2ab2ece5c80",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 76,
+          "agama": 77,
+          "bing": 77,
+          "sb": 85,
+          "kimia": 87,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 91,
+          "sejarah": 85,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16961,7 +17600,22 @@
       "74916784-2007-07-27": {
         "code": "01-156-185",
         "studentId": "03dea809-5f00-4e86-8448-f69175eb48b7",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 76.5,
+          "bindo": 75.83,
+          "fisika": 72.15,
+          "mtk": 76.17,
+          "agama": 76.5,
+          "pkwu": 76.25,
+          "bing": 74.83,
+          "sb": 72.17,
+          "kimia": 75.83,
+          "pkn": 76.67,
+          "simdig": 80.25,
+          "sejarah": 74.83,
+          "dpk": 80.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -16996,7 +17650,22 @@
       "75011556-2007-05-23": {
         "code": "01-156-028",
         "studentId": "4a86b173-2952-4719-ad42-1908cc87d225",
-        "values": {},
+        "values": {
+          "kk": 80.1,
+          "pjok": 77.5,
+          "bindo": 74.17,
+          "fisika": 80.25,
+          "mtk": 75.5,
+          "agama": 76.25,
+          "pkwu": 78.5,
+          "bing": 79.25,
+          "sb": 71.15,
+          "kimia": 73.5,
+          "pkn": 75.33,
+          "simdig": 82.5,
+          "sejarah": 72.5,
+          "dpk": 80.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17132,7 +17801,22 @@
       "75605074-2007-06-03": {
         "code": "01-156-090",
         "studentId": "329bb366-d8b8-4495-ae39-375711cc1e16",
-        "values": {},
+        "values": {
+          "kk": 79.25,
+          "pjok": 77.25,
+          "bindo": 76.83,
+          "fisika": 78.5,
+          "mtk": 76.83,
+          "agama": 78.17,
+          "pkwu": 79.75,
+          "bing": 77.83,
+          "sb": 76.5,
+          "kimia": 70.15,
+          "pkn": 76.67,
+          "simdig": 80.67,
+          "sejarah": 73.5,
+          "dpk": 83.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17169,7 +17853,6 @@
         "studentId": "f2dd3362-f38e-4658-ad4d-fe62bd386ce5",
         "values": {
           "kk": 77.5,
-          "pjok": 76,
           "bindo": 73.67,
           "fisika": 74.5,
           "mtk": 73.83,
@@ -17177,13 +17860,14 @@
           "pkwu": 78.5,
           "bing": 74.17,
           "sb": 72.5,
-          "kimia": 71,
           "pkn": 74.67,
-          "simdig": 74,
-          "blam": 71,
           "sejarah": 72.5,
-          "ipa": 71,
-          "dpk": 77
+          "pjok": 76.25,
+          "kimia": 71.5,
+          "simdig": 74.45,
+          "blam": 71.17,
+          "ipa": 71.53,
+          "dpk": 77.83
         },
         "dates": {
           "print": null,
@@ -17193,7 +17877,22 @@
       "75705434-2007-03-30": {
         "code": "01-156-012",
         "studentId": "91c580a5-9f3f-4221-98d5-8dac507ee5c7",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 82,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 76,
+          "agama": 77,
+          "bing": 79,
+          "sb": 85,
+          "kimia": 87,
+          "pkn": 85,
+          "simdig": 78,
+          "blam": 90,
+          "sejarah": 85,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17206,19 +17905,19 @@
           "kk": 79.5,
           "pjok": 76.25,
           "bindo": 76.17,
-          "fisika": 75,
           "mtk": 74.33,
           "agama": 76.5,
           "pkwu": 81.25,
-          "bing": 77,
           "sb": 72.5,
-          "kimia": 71,
           "pkn": 74.83,
-          "simdig": 74,
-          "blam": 71,
           "sejarah": 72.5,
-          "ipa": 71,
-          "dpk": 79
+          "kimia": 71.83,
+          "simdig": 74.67,
+          "fisika": 75.25,
+          "blam": 71.25,
+          "ipa": 71.83,
+          "bing": 77.33,
+          "dpk": 79.17
         },
         "dates": {
           "print": null,
@@ -17228,7 +17927,22 @@
       "75825352-2007-11-06": {
         "code": "01-156-074",
         "studentId": "8d32e419-7b36-473a-866e-ec99d2e135ad",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 80,
+          "bing": 77,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 85,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17313,7 +18027,22 @@
       "76294724-2007-10-03": {
         "code": "01-156-038",
         "studentId": "1e32250e-2377-439c-ab96-324fb37df96e",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 76,
+          "agama": 78,
+          "bing": 79,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 86,
+          "simdig": 79,
+          "blam": 90,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17347,7 +18076,22 @@
       "76394421-2007-02-22": {
         "code": "01-156-064",
         "studentId": "2f27b7b2-7f98-459e-b502-819a6c1b2684",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 87,
+          "agama": 79,
+          "bing": 86,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 82,
+          "simdig": 80,
+          "blam": 94,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17356,7 +18100,22 @@
       "76408737-2007-05-12": {
         "code": "01-156-067",
         "studentId": "103e7b20-4c4f-45a9-914a-b01d6da31862",
-        "values": {},
+        "values": {
+          "kk": 77.5,
+          "pjok": 74.25,
+          "bindo": 75.33,
+          "fisika": 75.5,
+          "mtk": 77.67,
+          "agama": 77.17,
+          "pkwu": 75.75,
+          "bing": 74.17,
+          "sb": 73.25,
+          "kimia": 74.5,
+          "pkn": 75.5,
+          "simdig": 78.5,
+          "sejarah": 75.5,
+          "dpk": 78.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17365,7 +18124,22 @@
       "76459544-2007-10-13": {
         "code": "01-156-077",
         "studentId": "e85a55cc-f4de-4eec-9c9f-e3e9c74a64f6",
-        "values": {},
+        "values": {
+          "kk": 76.5,
+          "pjok": 74.75,
+          "bindo": 73.5,
+          "fisika": 72.5,
+          "mtk": 74.33,
+          "agama": 76.17,
+          "pkwu": 76.25,
+          "bing": 74.5,
+          "sb": 77.5,
+          "kimia": 77.5,
+          "pkn": 74.67,
+          "simdig": 75.33,
+          "sejarah": 75.83,
+          "dpk": 76.15
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17400,7 +18174,22 @@
       "76656180-2007-05-22": {
         "code": "01-156-097",
         "studentId": "25757956-b5f7-4da6-9fad-c60ac1553c2d",
-        "values": {},
+        "values": {
+          "kk": 80.67,
+          "pjok": 77.5,
+          "bindo": 76.5,
+          "fisika": 80.25,
+          "mtk": 75.17,
+          "agama": 77.67,
+          "pkwu": 79.25,
+          "bing": 75.33,
+          "sb": 73.5,
+          "kimia": 74.5,
+          "pkn": 77.67,
+          "simdig": 80.83,
+          "sejarah": 75.83,
+          "dpk": 80.15
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17409,7 +18198,22 @@
       "76730300-2007-06-26": {
         "code": "01-156-111",
         "studentId": "b5195e78-f3bf-4eb2-86b0-9e08989e55cb",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 82,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 87,
+          "agama": 79,
+          "bing": 79,
+          "sb": 82,
+          "kimia": 88,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 94,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17445,22 +18249,22 @@
         "code": "01-156-083",
         "studentId": "840b1f86-0306-4e83-8fb5-6de4a9d67faf",
         "values": {
-          "kk": 78,
           "pjok": 77.75,
           "bindo": 73.33,
           "fisika": 72.5,
           "mtk": 74.67,
           "agama": 75.83,
-          "pkwu": 79,
-          "bing": 73,
-          "sb": 72,
-          "kimia": 71,
           "pkn": 76.67,
-          "simdig": 74,
-          "blam": 71,
           "sejarah": 72.5,
-          "ipa": 71,
-          "dpk": 79
+          "kk": 78.17,
+          "kimia": 71.33,
+          "simdig": 74.5,
+          "blam": 71.33,
+          "ipa": 71.33,
+          "pkwu": 79.83,
+          "bing": 73.67,
+          "dpk": 79.25,
+          "sb": 72.17
         },
         "dates": {
           "print": null,
@@ -17496,7 +18300,22 @@
       "77019280-2007-08-13": {
         "code": "01-156-135",
         "studentId": "539b9a99-92bf-406d-9917-00cfb95c2c7d",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 82,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 79,
+          "bing": 78,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 80,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17513,15 +18332,15 @@
           "mtk": 75.33,
           "agama": 76.17,
           "pkwu": 76.75,
-          "bing": 74,
           "sb": 73.5,
-          "kimia": 72,
           "pkn": 76.5,
-          "simdig": 74,
-          "blam": 72,
           "sejarah": 72.5,
-          "ipa": 72,
-          "dpk": 78
+          "kimia": 72.15,
+          "simdig": 74.67,
+          "blam": 72.35,
+          "ipa": 72.35,
+          "bing": 74.67,
+          "dpk": 78.25
         },
         "dates": {
           "print": null,
@@ -17531,7 +18350,22 @@
       "77208871-2007-07-31": {
         "code": "01-156-015",
         "studentId": "fa0be44a-2559-4942-8577-558f27857850",
-        "values": {},
+        "values": {
+          "kk": 82,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 87,
+          "agama": 80,
+          "bing": 77,
+          "sb": 85,
+          "kimia": 88,
+          "pkn": 86,
+          "simdig": 79,
+          "blam": 94,
+          "sejarah": 85,
+          "dpk": 82
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17566,7 +18400,6 @@
         "code": "01-156-105",
         "studentId": "e41d40cf-80f9-4097-b3dc-51bdccbdc48e",
         "values": {
-          "kk": 78,
           "pjok": 75.75,
           "bindo": 74.83,
           "fisika": 72.5,
@@ -17577,11 +18410,12 @@
           "sb": 73.5,
           "kimia": 71.5,
           "pkn": 74.5,
-          "simdig": 74,
           "blam": 71.5,
-          "sejarah": 73,
           "ipa": 71.5,
-          "dpk": 77.5
+          "dpk": 77.5,
+          "kk": 78.25,
+          "simdig": 74.15,
+          "sejarah": 73.67
         },
         "dates": {
           "print": null,
@@ -17591,7 +18425,23 @@
       "77672785-2007-08-13": {
         "code": "01-156-169",
         "studentId": "3e6a8942-4259-4128-8256-a904d233b88d",
-        "values": {},
+        "values": {
+          "kk": 81.67,
+          "pjok": 82.35,
+          "bindo": 85.67,
+          "fisika": 81.33,
+          "mtk": 90.15,
+          "agama": 79.25,
+          "pkwu": 81.83,
+          "bing": 78.17,
+          "sb": 92.67,
+          "kimia": 81.25,
+          "pkn": 83.33,
+          "simdig": 78.83,
+          "blam": 92.17,
+          "sejarah": 94.83,
+          "dpk": 81.17
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17600,7 +18450,22 @@
       "77937799-2007-09-29": {
         "code": "01-156-158",
         "studentId": "b233f42d-2bb1-4dbf-a5c1-4dda427bef74",
-        "values": {},
+        "values": {
+          "kk": 80.17,
+          "pjok": 75.5,
+          "bindo": 74.33,
+          "fisika": 73.5,
+          "mtk": 75.33,
+          "agama": 77.33,
+          "pkwu": 77.15,
+          "bing": 75.25,
+          "sb": 75.83,
+          "kimia": 73.17,
+          "pkn": 76.5,
+          "simdig": 77.5,
+          "sejarah": 75.5,
+          "dpk": 79.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17686,7 +18551,22 @@
       "78610948-2007-07-17": {
         "code": "01-156-024",
         "studentId": "5252b1ba-d23e-423d-803f-87b70d0ea409",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 82,
+          "fisika": 82,
+          "mtk": 77,
+          "agama": 80,
+          "bing": 76,
+          "sb": 82,
+          "kimia": 88,
+          "pkn": 86,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 82,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17695,7 +18575,22 @@
       "78751417-2007-05-31": {
         "code": "01-156-085",
         "studentId": "9cbe1230-7cd4-4928-b9a3-5681f076ee7f",
-        "values": {},
+        "values": {
+          "kk": 80.25,
+          "pjok": 76.83,
+          "bindo": 75.17,
+          "fisika": 75.25,
+          "mtk": 75.83,
+          "agama": 77.83,
+          "pkwu": 76.5,
+          "bing": 75.5,
+          "sb": 73.5,
+          "kimia": 78.83,
+          "pkn": 76.17,
+          "simdig": 80.5,
+          "sejarah": 73.5,
+          "dpk": 81.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17730,7 +18625,22 @@
       "78804560-2007-03-23": {
         "code": "01-156-021",
         "studentId": "91a48ac4-f6aa-4951-ada7-f756a7be394c",
-        "values": {},
+        "values": {
+          "kk": 78.7,
+          "pjok": 76.25,
+          "bindo": 75.83,
+          "fisika": 79.67,
+          "mtk": 75.5,
+          "agama": 77.83,
+          "pkwu": 74.5,
+          "bing": 75.5,
+          "sb": 77.5,
+          "kimia": 73.5,
+          "pkn": 76.33,
+          "simdig": 82.5,
+          "sejarah": 73.5,
+          "dpk": 80.5
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17740,13 +18650,9 @@
         "code": "01-156-057",
         "studentId": "6a06ae43-968e-455e-981e-65a2c32c356f",
         "values": {
-          "kk": 79,
           "pjok": 75.25,
           "bindo": 78.33,
-          "fisika": 74,
-          "mtk": 77,
           "agama": 78.83,
-          "pkwu": 81,
           "sb": 76.5,
           "kimia": 73.5,
           "pkn": 77.33,
@@ -17754,7 +18660,12 @@
           "blam": 73.5,
           "sejarah": 73.5,
           "ipa": 73.5,
-          "dpk": 78
+          "kk": 79.25,
+          "fisika": 74.25,
+          "mtk": 77.33,
+          "pkwu": 81.67,
+          "bing": 76.83,
+          "dpk": 78.15
         },
         "dates": {
           "print": null,
@@ -17764,7 +18675,22 @@
       "79087342-2007-05-25": {
         "code": "01-156-066",
         "studentId": "49867ba5-98a2-456d-9bc5-71d2d0e63ff5",
-        "values": {},
+        "values": {
+          "kk": 77.15,
+          "pjok": 76.25,
+          "bindo": 74.67,
+          "fisika": 76.15,
+          "mtk": 76.83,
+          "agama": 77.5,
+          "pkwu": 77.25,
+          "bing": 76.67,
+          "sb": 74.33,
+          "kimia": 75.25,
+          "pkn": 76.33,
+          "simdig": 75.5,
+          "sejarah": 73.5,
+          "dpk": 79.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17773,7 +18699,23 @@
       "79155605-2007-10-21": {
         "code": "01-156-164",
         "studentId": "56d5def8-bd8b-43f2-92bc-3f38a96c7d55",
-        "values": {},
+        "values": {
+          "kk": 81.15,
+          "pjok": 80.83,
+          "bindo": 85.17,
+          "fisika": 82.67,
+          "mtk": 85.25,
+          "agama": 80.33,
+          "pkwu": 81.25,
+          "bing": 85.67,
+          "sb": 92.33,
+          "kimia": 82.33,
+          "pkn": 82.67,
+          "simdig": 80.33,
+          "blam": 92.15,
+          "sejarah": 93.83,
+          "dpk": 81.25
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17783,7 +18725,6 @@
         "code": "01-156-129",
         "studentId": "318bc749-e0e4-4419-9d8c-94744ab2c01a",
         "values": {
-          "pjok": 77,
           "bindo": 78.33,
           "fisika": 77.5,
           "mtk": 78.33,
@@ -17796,7 +18737,10 @@
           "simdig": 77.5,
           "blam": 77.5,
           "sejarah": 77.5,
-          "ipa": 77.5
+          "ipa": 77.5,
+          "kk": 83.67,
+          "pjok": 77.83,
+          "dpk": 83.33
         },
         "dates": {
           "print": null,
@@ -17882,7 +18826,22 @@
       "79545994-2007-04-27": {
         "code": "01-156-147",
         "studentId": "56772bd1-97f1-490a-993a-b7d3cc270483",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 83,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 78,
+          "bing": 78,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 80,
+          "simdig": 78,
+          "blam": 90,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17891,7 +18850,22 @@
       "79612461-2007-12-14": {
         "code": "01-156-107",
         "studentId": "bfd574d9-1ce6-45f7-a232-c0385ce503ed",
-        "values": {},
+        "values": {
+          "kk": 80.33,
+          "pjok": 76.75,
+          "bindo": 80.25,
+          "fisika": 76.5,
+          "mtk": 76.83,
+          "agama": 78.5,
+          "pkwu": 80.25,
+          "bing": 76.5,
+          "sb": 73.5,
+          "kimia": 78.5,
+          "pkn": 77.33,
+          "simdig": 80.25,
+          "sejarah": 77.15,
+          "dpk": 75.15
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17900,7 +18874,22 @@
       "79906070-2007-08-06": {
         "code": "01-156-136",
         "studentId": "f1c29544-62ff-4978-bf80-4c538da8fb69",
-        "values": {},
+        "values": {
+          "kk": 82,
+          "pjok": 80,
+          "bindo": 85,
+          "fisika": 85,
+          "mtk": 76,
+          "agama": 79,
+          "bing": 84,
+          "sb": 85,
+          "kimia": 87,
+          "pkn": 82,
+          "simdig": 80,
+          "blam": 93,
+          "sejarah": 85,
+          "dpk": 82
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17909,7 +18898,22 @@
       "81553990-2008-01-15": {
         "code": "01-156-018",
         "studentId": "224408c4-bf66-4972-9d47-8c7cf80729ff",
-        "values": {},
+        "values": {
+          "kk": 79.17,
+          "pjok": 75.67,
+          "bindo": 75.83,
+          "fisika": 73.5,
+          "mtk": 75.17,
+          "agama": 77.67,
+          "pkwu": 76.5,
+          "bing": 75.33,
+          "sb": 75.5,
+          "kimia": 78.5,
+          "pkn": 78.33,
+          "simdig": 82.5,
+          "sejarah": 74.5,
+          "dpk": 74.33
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17943,7 +18947,22 @@
       "82480180-2007-08-27": {
         "code": "01-156-154",
         "studentId": "b73c0a11-e98d-4534-88e2-f74b5a4a1689",
-        "values": {},
+        "values": {
+          "kk": 80.15,
+          "pjok": 75.5,
+          "bindo": 74.33,
+          "fisika": 75.15,
+          "mtk": 75.67,
+          "agama": 76.5,
+          "pkwu": 77.25,
+          "bing": 76.83,
+          "sb": 73.25,
+          "kimia": 74.83,
+          "pkn": 75.83,
+          "simdig": 77.5,
+          "sejarah": 71.25,
+          "dpk": 80.83
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17952,7 +18971,22 @@
       "83851358-2008-01-09": {
         "code": "01-156-055",
         "studentId": "1858c611-49e6-4e62-ae51-df3f736b6d31",
-        "values": {},
+        "values": {
+          "kk": 81,
+          "pjok": 80,
+          "bindo": 80,
+          "fisika": 80,
+          "mtk": 77,
+          "agama": 79,
+          "bing": 79,
+          "sb": 80,
+          "kimia": 87,
+          "pkn": 83,
+          "simdig": 78,
+          "blam": 92,
+          "sejarah": 80,
+          "dpk": 81
+        },
         "dates": {
           "print": null,
           "read": null
@@ -17961,7 +18995,22 @@
       "85216270-2008-03-26": {
         "code": "01-156-059",
         "studentId": "74b97525-e350-4439-99c7-7ba5e6ff04fe",
-        "values": {},
+        "values": {
+          "kk": 80.5,
+          "pjok": 76.5,
+          "bindo": 75.5,
+          "fisika": 76.33,
+          "mtk": 77.17,
+          "agama": 77.67,
+          "pkwu": 77.25,
+          "bing": 76.33,
+          "sb": 75.5,
+          "kimia": 79.15,
+          "pkn": 70.5,
+          "simdig": 79.83,
+          "sejarah": 75.25,
+          "dpk": 74.5
+        },
         "dates": {
           "print": null,
           "read": null

@@ -12,7 +12,6 @@ const GraduationAdminDocDescriptionLayout: React.FC = () => {
     if (!data) return null
     return data.find((item) => item.uid === docId) ?? null
   }, [data, docId])
-  console.log("result", result)
   return (
     <PDFViewer className="w-full h-full" showToolbar={false}>
       <GraduationAdminDocDescriptionPDF result={result} />
